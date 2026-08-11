@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header id="header">
+        <div class="container header_inner">
+          <a class="header_logo" href="javascript:;"
+            ><img src="../assets/images/logo.png" alt="여신금융협회"
+          /></a>
+          <nav class="header_nav" aria-label="주요 메뉴">
+            <a href="javascript:;">대출모집인 제도</a>
+            <a href="javascript:;">대출모집인조회</a>
+            <a href="javascript:;">보수교육수료정보 조회</a>
+            <a href="javascript:;">나의 대출 모집인 등록/조회</a>
+            <a href="javascript:;">공지사항</a>
+          </nav>
+          <div class="header_auth">
+            <a class="header_login is_logout" href="javascript:;">로그아웃</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="site_main dashboard_content">
+        <div class="container dashboard_inner">
+          <div class="dashboard_top">
+            <section class="profile_card is_company">
+              <div class="profile_body">
+                <div class="profile_head">
+                  <span class="user_icon"
+                    ><img src="../assets/images/icon-user.svg" alt=""
+                  /></span>
+                  <div class="company_head_info">
+                    <div class="company_identity">
+                      <div class="user_name">
+                        <strong>다가와머니</strong><span>님</span>
+                      </div>
+                      <p class="company_agent">김*리 (대리인) 님</p>
+                    </div>
+                    <div class="profile_actions">
+                      <button type="button">
+                        내 정보
+                        <img src="../assets/images/icon-myinfo.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile_details">
+                  <div class="company_register_group">
+                    <button class="company_search" type="button">
+                      소속 모집인 조회
+                      <img src="../assets/images/icon-search.svg" alt="" />
+                    </button>
+                    <div class="register_box">
+                      <div class="register_summary">
+                        <div class="register_dates">
+                          <span><em>등록</em> 2025.10.01</span>
+                          <span><em>확인</em> 2026.01.01</span>
+                        </div>
+                        <div class="register_no">
+                          10-293810002
+                          <button
+                            type="button"
+                            class="summary_copy_button"
+                            data-copy="10-293810002"
+                            aria-label="등록번호 복사"
+                          >
+                            <img
+                              class="summary_copy_icon"
+                              src="../assets/images/icon-copy.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="quick_menu">
+                    <li>
+                      <img
+                        src="../assets/images/quick-register.svg"
+                        alt=""
+                      />등록
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/quick-certificate.svg"
+                        alt=""
+                      />등록증발급
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/quick-change.svg"
+                        alt=""
+                      />변경보고
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/quick-add.svg"
+                        alt=""
+                      />추가등록
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="profile_foot is_company">
+                <div class="company_career">
+                  <div class="company_career_head">
+                    <strong>대출 신규</strong>
+                  </div>
+                  <div class="company_career_count">
+                    <span class="company_career_total"
+                      ><strong>1</strong><span>건</span></span
+                    ><span>(10명)</span>
+                  </div>
+                </div>
+                <div class="company_career">
+                  <div class="company_career_head">
+                    <strong>리스 경력</strong>
+                    <button class="career_add" type="button">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 4L8 12M12 8L4 8"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                      <span>추가</span>
+                    </button>
+                  </div>
+                  <div class="company_career_count">
+                    <span class="company_career_total"
+                      ><strong>2</strong><span>건</span></span
+                    ><span>(2명)</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="dashboard_banner js_dashboard_slider"
+              aria-label="주요 안내"
+              aria-roledescription="carousel"
+            >
+              <div class="dashboard_banner_inner">
+                <div class="dashboard_slide_track">
+                  <div
+                    class="dashboard_slide"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label="1 / 4"
+                  >
+                    <img
+                      src="../assets/images/dashboard-banner.png"
+                      alt="등록 요건 변경 및 등록요건 변경확인 요청사항 안내"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard_slide_controls">
+                <span class="dashboard_slide_count" aria-live="polite"
+                  ><strong class="js_slide_current">1</strong
+                  ><i aria-hidden="true">/</i><span>4</span></span
+                >
+                <div class="dashboard_slide_buttons">
+                  <button
+                    class="dashboard_slide_button is_prev"
+                    type="button"
+                    aria-label="이전 슬라이드"
+                  ></button>
+                  <button
+                    class="dashboard_slide_button is_toggle"
+                    type="button"
+                    aria-label="슬라이드 일시정지"
+                    aria-pressed="false"
+                  ></button>
+                  <button
+                    class="dashboard_slide_button is_next"
+                    type="button"
+                    aria-label="다음 슬라이드"
+                  ></button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dashboard_bottom">
+            <section class="progress_box">
+              <h2 class="box_title">
+                진행중인 협회 요청 <strong>12<em>건</em></strong
+                ><button class="more" type="button" aria-label="더보기">
+                  <img src="../assets/images/icon-plus.svg" alt="" />
+                </button>
+              </h2>
+              <div
+                class="progress_list js_progress_slider"
+                role="region"
+                aria-label="진행중인 협회 요청 목록"
+                tabindex="0"
+              >
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+                <article class="progress_card" tabindex="0">
+                  <div class="progress_head">
+                    <p class="date"><span>최초등록</span> 2025.10.01</p>
+                    <h3>대출 신규 (현대캐피탈)</h3>
+                  </div>
+                  <div class="progress_status">
+                    <strong>보완요청</strong
+                    ><span>제출하신 서류를 확인해 주세요.</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="dashboard_notice">
+              <h2 class="box_title">
+                공지사항
+                <button class="more" type="button" aria-label="더보기">
+                  <img src="../assets/images/icon-plus.svg" alt="" />
+                </button>
+              </h2>
+              <div class="notice_cards">
+                <a class="notice_card is_new active" href="javascript:;"
+                  ><span class="notice_title"
+                    ><i class="notice_new">N</i
+                    ><span>시스템 점검계획 안내(실시기한 내용 참조)</span></span
+                  ><time>23.12.01</time></a
+                >
+                <a class="notice_card is_new" href="javascript:;"
+                  ><span class="notice_title"
+                    ><i class="notice_new">N</i
+                    ><span>시스템 점검계획 안내(실시기한 내용 참조)</span></span
+                  ><time>23.12.01</time></a
+                >
+                <a class="notice_card" href="javascript:;"
+                  ><span class="notice_title"
+                    ><span>시스템 점검계획 안내(실시기한 내용 참조)</span></span
+                  ><time>23.09.19</time></a
+                >
+                <a class="notice_card" href="javascript:;"
+                  ><span class="notice_title"
+                    ><span>시스템 점검계획 안내(실시기한 내용 참조)</span></span
+                  ><time>23.09.19</time></a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <div class="partner_bar">
+        <div class="partner_list">
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="은행연합회"
+            ><img
+              src="../assets/images/partner-federation.png"
+              alt="은행연합회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="저축은행중앙회"
+            ><img src="../assets/images/partner-bank.png" alt="저축은행중앙회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="생명보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-savings.png"
+                alt="생명보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="손해보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-life.png"
+                alt="손해보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="신협"
+            ><span
+              ><img
+                src="../assets/images/partner-capital.png"
+                alt="신협" /></span
+          ></a>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div class="footer_top">
+            <img
+              class="footer_logo"
+              src="../assets/images/footer-logo.png"
+              alt="여신금융협회"
+            />
+            <div class="footer_columns">
+              <div class="footer_company">
+                <p><span>상호명</span> (사)한국여신전문금융업협회</p>
+                <p>
+                  <span>대표자</span> 정완규 <i></i>
+                  <span>사업자등록번호</span> 202-82-05723
+                </p>
+                <p><span>대표전화</span> 02-2011-0770</p>
+              </div>
+              <div class="footer_address">
+                <p>
+                  서울특별시 중구 다동길 43 (다동70번지) 한외빌딩12~13층
+                  여신금융협회 (04521)
+                </p>
+                <p>
+                  COPYRIGHT © THE CREDIT FINANCE ASSOCIATION ALL RIGHTS
+                  RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_links">
+            <a href="javascript:;"
+              ><img
+                src="../assets/images/footer-book.svg"
+                alt=""
+              />개인정보처리방침</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-mail.svg" alt="" />이용약관</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-rules.svg" alt="" />관련규정</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-chat.svg" alt="" />FAQ</a
+            >
+          </div>
+        </div>
+      </footer>
+      <script>
+        document.querySelectorAll(".js_dashboard_slider").forEach((slider) => {
+          const track = slider.querySelector(".dashboard_slide_track");
+          const firstSlide = track.querySelector(".dashboard_slide");
+          const currentText = slider.querySelector(".js_slide_current");
+          const toggleButton = slider.querySelector(".is_toggle");
+          const total = 4;
+          let index = 0;
+          let playing = true;
+          let timer;
+
+          for (let item = 1; item < total; item += 1) {
+            const clone = firstSlide.cloneNode(true);
+            clone.setAttribute("aria-label", `${item + 1} / ${total}`);
+            clone.querySelector("img").alt = "";
+            track.appendChild(clone);
+          }
+
+          const render = () => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            currentText.textContent = index + 1;
+          };
+          const restart = () => {
+            window.clearInterval(timer);
+            if (playing)
+              timer = window.setInterval(() => {
+                index = (index + 1) % total;
+                render();
+              }, 5000);
+          };
+          slider.querySelector(".is_prev").addEventListener("click", () => {
+            index = (index - 1 + total) % total;
+            render();
+            restart();
+          });
+          slider.querySelector(".is_next").addEventListener("click", () => {
+            index = (index + 1) % total;
+            render();
+            restart();
+          });
+          toggleButton.addEventListener("click", () => {
+            playing = !playing;
+            toggleButton.classList.toggle("is_paused", !playing);
+            toggleButton.setAttribute("aria-pressed", String(!playing));
+            restart();
+          });
+          restart();
+        });
+
+        document.querySelectorAll(".js_progress_slider").forEach((slider) => {
+          let offset = 0;
+          let isDragging = false;
+          let startX = 0;
+          let dragStartOffset = 0;
+
+          const getBounds = () => {
+            const parent = slider.parentElement;
+            const parentStyle = window.getComputedStyle(parent);
+            const contentWidth =
+              parent.clientWidth -
+              Number.parseFloat(parentStyle.paddingLeft) -
+              Number.parseFloat(parentStyle.paddingRight);
+            const maxOffset = 0;
+            const minOffset = Math.min(0, contentWidth - slider.scrollWidth);
+            return { min: minOffset, max: maxOffset };
+          };
+
+          const render = (withAnimation = true) => {
+            slider.classList.toggle("is_dragging", !withAnimation);
+            slider.style.transform = `translateX(${offset}px)`;
+          };
+
+          const finishDrag = () => {
+            if (!isDragging) {
+              return;
+            }
+
+            isDragging = false;
+            slider.classList.remove("is_dragging");
+            const bounds = getBounds();
+            offset = Math.min(bounds.max, Math.max(bounds.min, offset));
+            render();
+          };
+
+          slider.addEventListener("pointerdown", (event) => {
+            if (event.button !== 0) {
+              return;
+            }
+
+            isDragging = true;
+            startX = event.clientX;
+            dragStartOffset = offset;
+            slider.classList.add("is_dragging");
+            slider.setPointerCapture(event.pointerId);
+          });
+
+          slider.addEventListener("pointermove", (event) => {
+            if (!isDragging) {
+              return;
+            }
+
+            offset = dragStartOffset + (event.clientX - startX);
+            render(false);
+          });
+
+          slider.addEventListener("pointerup", finishDrag);
+          slider.addEventListener("pointercancel", finishDrag);
+          slider.addEventListener("dragstart", (event) =>
+            event.preventDefault(),
+          );
+        });
+      </script>
+    </div>
+  </body>
+</html>

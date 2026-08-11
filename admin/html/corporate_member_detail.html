@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집인 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집인조회</a>
+                <a href="javascript:;">모집인 심사</a>
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">회원 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >법인회원</a
+                >
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a href="javascript:;">팝업관리</a>
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">법인회원 상세</h1>
+            <div class="admin_breadcrumb">
+              <span>회원관리</span><span>법인회원</span>
+            </div>
+          </div>
+          <section class="detail_surface">
+            <table class="info_rows" aria-label="법인회원 상세 정보">
+              <caption class="sound_only">
+                법인회원 상세 정보
+              </caption>
+              <colgroup>
+                <col style="width: 220px" />
+                <col />
+                <col style="width: 220px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="required" scope="row">법인명</th>
+                  <td>트라이언코퍼레이션</td>
+                  <th class="required" scope="row">법인번호</th>
+                  <td>123456-0123456</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">사업자번호</th>
+                  <td>111111111</td>
+                  <th class="required" scope="row">아이디</th>
+                  <td>trion1234</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">대표자명</th>
+                  <td>김대표</td>
+                  <th class="required" scope="row">대표자 연락처</th>
+                  <td>010-1234-5678</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">생년월일</th>
+                  <td>1988.12.12</td>
+                  <th class="required" scope="row">성별</th>
+                  <td>남성</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">내외국인여부</th>
+                  <td>내국인</td>
+                  <th class="required" scope="row">CI</th>
+                  <td>
+                    <div class="info_value_action">
+                      <span>H****************************</span
+                      ><button class="button tiny light" type="button">
+                        복사
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">이메일</th>
+                  <td>abcdfdsa@trion.com</td>
+                  <th class="required" scope="row">법인승인여부</th>
+                  <td>Y</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">법인승인일</th>
+                  <td>2026-06-28</td>
+                  <th class="required" scope="row">가입일</th>
+                  <td>2026-06-28</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">약관동의여부</th>
+                  <td>Y</td>
+                  <th class="required" scope="row">약관동의일</th>
+                  <td>2026-06-28</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">마지막로그인일시</th>
+                  <td>2026-06-28</td>
+                  <th class="required" scope="row">로그인 실패횟수</th>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">로그인잠금일시</th>
+                  <td>2026-06-28</td>
+                  <th class="required" scope="row">금융감독원 승인여부</th>
+                  <td>
+                    <div class="info_value_action">
+                      <div class="info_radios">
+                        <label class="radio"
+                          ><input type="radio" checked name="fss" />Y</label
+                        ><label class="radio"
+                          ><input type="radio" name="fss" />N</label
+                        >
+                      </div>
+                      <button class="button tiny light" type="button">
+                        수정
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">말소이력</th>
+                  <td>N</td>
+                  <th class="required" scope="row">첨부파일</th>
+                  <td>2.법인등기부등본_(트라이언코퍼레이션).pdf</td>
+                </tr>
+                <tr class="textarea_row">
+                  <th class="required" scope="row">승인/가승인 사유</th>
+                  <td colspan="3">
+                    <textarea
+                      class="detail_textarea"
+                      aria-label="승인 또는 가승인 사유"
+                      placeholder="TEXT EDITOR (ROWS: 3)"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="required" scope="row">대리인 CI</th>
+                  <td>
+                    <div class="info_value_action">
+                      <span>H************************</span
+                      ><button class="button tiny light" type="button">
+                        복사
+                      </button>
+                    </div>
+                  </td>
+                  <th class="required" scope="row">대리인 위임장</th>
+                  <td>트라이언코퍼레이션_위임장.pdf</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="detail_actions">
+              <button class="button outline" type="button">목록</button
+              ><button
+                class="button dark"
+                type="button"
+                onclick="alertModal('danger', '로그인 잠금을 해제하시겠습니까?', '취소', '확인')"
+              >
+                로그인 잠금해제
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

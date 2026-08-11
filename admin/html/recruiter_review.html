@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">모집인 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">모집인조회</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >모집인 심사</a
+                >
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a href="javascript:;">법인회원</a>
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a href="javascript:;">팝업관리</a>
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">모집인 심사</h1>
+            <div class="admin_breadcrumb">
+              <span>모집인 관리</span><span>모집인 심사</span>
+            </div>
+          </div>
+          <div class="admin_content">
+            <form
+              class="search_card review_search_card"
+              onsubmit="return false;"
+            >
+              <div class="filter_grid review_filter_grid">
+                <div class="filter_control">
+                  <label for="review_type">심사구분</label
+                  ><select id="review_type">
+                    <option>전체</option>
+                    <option>최초등록</option>
+                    <option>등록변경</option>
+                    <option>계약</option>
+                  </select>
+                </div>
+                <div class="filter_control">
+                  <label for="review_status">심사상태</label
+                  ><select id="review_status">
+                    <option>전체</option>
+                    <option>접수</option>
+                    <option>심사중</option>
+                    <option>반려</option>
+                    <option>보완요청</option>
+                    <option>거절</option>
+                    <option>재요청</option>
+                    <option>승인</option>
+                  </select>
+                </div>
+                <div class="filter_control">
+                  <label for="receipt_number">접수번호</label
+                  ><input id="receipt_number" placeholder="접수번호" />
+                </div>
+              </div>
+              <div class="date_filter">
+                <span class="date_label">심사요청일자</span>
+                <div class="date_input_group">
+                  <input
+                    class="js_datepicker"
+                    type="text"
+                    aria-label="가입 시작일"
+                    autocomplete="off"
+                    inputmode="numeric"
+                  />
+                  <span class="date_dash">~</span>
+                  <input
+                    class="js_datepicker"
+                    type="text"
+                    aria-label="가입 종료일"
+                    autocomplete="off"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="period_buttons">
+                  <button type="button">1일</button
+                  ><button type="button">2주</button
+                  ><button class="active" type="button">1개월</button
+                  ><button type="button">3개월</button
+                  ><button type="button">6개월</button>
+                </div>
+              </div>
+              <div class="filter_grid review_filter_grid">
+                <div class="filter_control">
+                  <label for="register_number">등록번호/<br />가번호</label
+                  ><input id="register_number" placeholder="등록번호" />
+                </div>
+                <div class="filter_control">
+                  <label for="recruiter_type">모집인 분류</label
+                  ><select id="recruiter_type">
+                    <option>전체</option>
+                    <option>개인</option>
+                    <option>법인</option>
+                    <option>법인사용인</option>
+                  </select>
+                </div>
+                <div class="filter_control">
+                  <label for="member_company">회원사명</label
+                  ><input id="member_company" />
+                </div>
+                <div class="filter_control">
+                  <label for="product_type">금융상품유형</label
+                  ><select id="product_type">
+                    <option>전체</option>
+                    <option>대출</option>
+                    <option>리스</option>
+                  </select>
+                </div>
+                <div class="filter_control">
+                  <label for="recruiter_name">이름</label
+                  ><input id="recruiter_name" />
+                </div>
+                <div class="filter_control">
+                  <label for="birth">생년월일</label><input id="birth" />
+                </div>
+                <div class="filter_control">
+                  <label for="mobile">휴대전화번호</label><input id="mobile" />
+                </div>
+                <div class="filter_control">
+                  <label for="ceo">대표자명</label><input id="ceo" />
+                </div>
+                <div class="filter_control">
+                  <span class="filter_label">결격사유</span>
+                  <div class="radio_group">
+                    <label class="radio"
+                      ><input type="radio" checked name="disq" />Y</label
+                    ><label class="radio"
+                      ><input type="radio" name="disq" />N</label
+                    ><label class="radio"
+                      ><input type="radio" name="disq" />B</label
+                    >
+                  </div>
+                </div>
+                <div class="filter_control">
+                  <span class="filter_label">범죄이력</span>
+                  <div class="radio_group">
+                    <label class="radio"
+                      ><input type="radio" checked name="crime" />Y</label
+                    ><label class="radio"
+                      ><input type="radio" name="crime" />N</label
+                    ><label class="radio"
+                      ><input type="radio" name="crime" />B</label
+                    >
+                  </div>
+                </div>
+                <div class="filter_control">
+                  <span class="filter_label">사회적신용</span>
+                  <div class="radio_group">
+                    <label class="radio"
+                      ><input type="radio" checked name="credit" />Y</label
+                    ><label class="radio"
+                      ><input type="radio" name="credit" />N</label
+                    ><label class="radio"
+                      ><input type="radio" name="credit" />B</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="search_actions">
+                <button class="button outline" type="button">
+                  <span class="button_icon reset" aria-hidden="true"></span
+                  >초기화</button
+                ><button class="button dark" type="submit">
+                  <span class="button_icon search" aria-hidden="true"></span
+                  >조회
+                </button>
+              </div>
+            </form>
+
+            <div class="list_toolbar">
+              <div class="toolbar_options">
+                <p class="list_count">총 <strong>10</strong> 건</p>
+                <div class="toolbar_checks">
+                  <label class="check"
+                    ><input type="checkbox" />심사완료예정일자 10일이내만
+                    조회</label
+                  ><label class="check"
+                    ><input type="checkbox" />담당 심사만 조회</label
+                  >
+                </div>
+              </div>
+            </div>
+            <section class="table_surface review_table_surface">
+              <div class="data_table_wrapper">
+                <table class="data_table review_table fixed_table">
+                  <caption class="sound_only">
+                    모집인 심사 목록
+                  </caption>
+                  <colgroup>
+                    <col style="width: 8.86%" />
+                    <col style="width: 6.64%" />
+                    <col style="width: 7.01%" />
+                    <col style="width: 6.64%" />
+                    <col style="width: 8.12%" />
+                    <col style="width: 11.07%" />
+                    <col style="width: 8.12%" />
+                    <col style="width: 9.59%" />
+                    <col style="width: 9.59%" />
+                    <col style="width: 140px" />
+                    <col style="width: 150px" />
+                    <col style="width: 40px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>접수번호</th>
+                      <th>심사구분</th>
+                      <th>모집인분류</th>
+                      <th aria-sort="ascending">
+                        <button
+                          class="table_sort"
+                          type="button"
+                          data-sort-state="asc"
+                          data-sort-type="text"
+                        >
+                          이름<span
+                            class="table_sort_icon"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+                      </th>
+                      <th>생년월일</th>
+                      <th>법인명/<br />법인번호</th>
+                      <th>회원사</th>
+                      <th aria-sort="descending">
+                        <button
+                          class="table_sort"
+                          type="button"
+                          data-sort-state="desc"
+                          data-sort-type="date"
+                        >
+                          <span>요청일/<br />심사시작일시</span
+                          ><span
+                            class="table_sort_icon"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+                      </th>
+                      <th aria-sort="descending">
+                        <button
+                          class="table_sort"
+                          type="button"
+                          data-sort-state="desc"
+                          data-sort-type="date"
+                        >
+                          <span>심사완료<br />(예정)일자</span
+                          ><span
+                            class="table_sort_icon"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+                      </th>
+                      <th>담당자</th>
+                      <th>상태</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody onclick="reviewTableClick(event)">
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>계약</td>
+                      <td>법인</td>
+                      <td>
+                        <a class="link" href="javascript:;">조은빛나래</a>
+                      </td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >레이커스<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>김명화</small></td>
+                      <td>26.01.01<br />26.10.01</td>
+                      <td>
+                        26.01.01<br /><span class="d_day warn">D+10</span>
+                      </td>
+                      <td>김철수<br /><small>이유리(결재:26.07.16)</small></td>
+                      <td><span class="status_text">접수</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>계약</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김순자</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>김명화</small></td>
+                      <td>26.01.01</td>
+                      <td>26.09.01</td>
+                      <td>김철수</td>
+                      <td><span class="status_text">반려</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>계약</td>
+                      <td>법인</td>
+                      <td><a class="link" href="javascript:;">박영호</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>승인일 홀딩:<br />26.06.10</td>
+                      <td>김철수</td>
+                      <td>
+                        <span class="status_text">보완요청(26.05.01)</span>
+                      </td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영숙</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10</td>
+                      <td>김철수</td>
+                      <td><span class="status_text">거절(26.05.01)</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영수</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10<br /><span class="d_day">D-60</span></td>
+                      <td>김철수</td>
+                      <td><span class="status_text">심사중</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>최초등록</td>
+                      <td>법인사용인</td>
+                      <td><a class="link" href="javascript:;">홍길동</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >레이커스<br />10023655422</a
+                        >
+                      </td>
+                      <td>현대캐피탈<br /><small>김명화</small></td>
+                      <td>26.01.01</td>
+                      <td>26.01.01<br /><span class="d_day">D-10</span></td>
+                      <td>
+                        <button class="table_action" type="button">
+                          담당자지정
+                        </button>
+                      </td>
+                      <td>
+                        <span class="status_text">승인(20.07.02)</span>
+                        <button
+                          class="process_action"
+                          type="button"
+                          aria-haspopup="menu"
+                          aria-expanded="false"
+                          data-review-menu="#review-process-menu"
+                        >
+                          처리
+                        </button>
+                      </td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영수</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10</td>
+                      <td>김철수<br /><small>이유리(처리:26.07.16)</small></td>
+                      <td><span class="status_text">거절(26.05.01)</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영수</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10</td>
+                      <td>김철수</td>
+                      <td><span class="status_text">재요청</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영수</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10</td>
+                      <td>김철수</td>
+                      <td><span class="status_text">심사중</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>LC100209310</td>
+                      <td>등록변경</td>
+                      <td>개인</td>
+                      <td><a class="link" href="javascript:;">김영수</a></td>
+                      <td>1990.12.12</td>
+                      <td>
+                        <a class="link" href="javascript:;"
+                          >현대<br />10023655422</a
+                        >
+                      </td>
+                      <td>Bnk<br /><small>-</small></td>
+                      <td>26.01.01</td>
+                      <td>26.06.10</td>
+                      <td>김철수</td>
+                      <td><span class="status_text">거절(26.05.01)</span></td>
+                      <td>
+                        <button type="button" class="table_plus">+</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="review_menu"
+                id="review-row-menu"
+                role="menu"
+                aria-label="심사 행 메뉴"
+                hidden
+              >
+                <button
+                  type="button"
+                  role="menuitem"
+                  onclick="reviewMenuHide()"
+                >
+                  담당자 변경
+                </button>
+                <button
+                  type="button"
+                  role="menuitem"
+                  onclick="reviewMenuHide()"
+                >
+                  심사이력보기
+                </button>
+              </div>
+              <div
+                class="review_menu"
+                id="review-process-menu"
+                role="menu"
+                aria-label="처리 메뉴"
+                hidden
+              >
+                <button
+                  type="button"
+                  role="menuitem"
+                  onclick="reviewMenuHide()"
+                >
+                  처리이력보기
+                </button>
+                <button
+                  type="button"
+                  role="menuitem"
+                  onclick="reviewMenuHide()"
+                >
+                  처리
+                </button>
+              </div>
+              <nav class="paging" aria-label="페이지">
+                <a
+                  href="javascript:;"
+                  aria-label="첫 페이지"
+                  aria-disabled="true"
+                  class="paging_btn first disabled"
+                  >첫 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="이전 페이지"
+                  aria-disabled="true"
+                  class="paging_btn prev disabled"
+                  >이전 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="첫 페이지"
+                  class="paging_btn first"
+                  >첫 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="이전 페이지"
+                  class="paging_btn prev"
+                  >이전 페이지</a
+                >
+                <a
+                  class="paging_number active"
+                  href="javascript:;"
+                  aria-current="page"
+                  >1</a
+                >
+                <a class="paging_number" href="javascript:;">2</a>
+                <a class="paging_number" href="javascript:;">3</a>
+                <a class="paging_number" href="javascript:;">4</a>
+                <a class="paging_number" href="javascript:;">5</a>
+                <a
+                  href="javascript:;"
+                  aria-label="다음 페이지"
+                  class="paging_btn next"
+                  >다음 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="마지막 페이지"
+                  class="paging_btn last"
+                  >마지막 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="다음 페이지"
+                  aria-disabled="true"
+                  class="paging_btn next disabled"
+                  >다음 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="마지막 페이지"
+                  aria-disabled="true"
+                  class="paging_btn last disabled"
+                  >마지막 페이지</a
+                >
+              </nav>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

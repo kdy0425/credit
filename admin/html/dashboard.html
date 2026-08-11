@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집인 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집인조회</a>
+                <a href="javascript:;">모집인 심사</a>
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">회원 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >법인회원</a
+                >
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a href="javascript:;">팝업관리</a>
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">법인회원</h1>
+            <div class="admin_breadcrumb" aria-label="현재 위치">
+              <span>회원관리</span><span>법인회원</span>
+            </div>
+          </div>
+
+          <div class="admin_content">
+            <form
+              class="search_card member_search_card"
+              onsubmit="return false;"
+            >
+              <div class="filter_grid">
+                <div class="filter_control">
+                  <label for="member_id">아이디</label
+                  ><input id="member_id" type="text" />
+                </div>
+                <div class="filter_control">
+                  <label for="member_name">이름</label
+                  ><input id="member_name" type="text" />
+                </div>
+                <div class="filter_control">
+                  <label for="member_phone">연락처</label
+                  ><input id="member_phone" type="text" />
+                </div>
+                <div class="filter_control">
+                  <label for="member_email">이메일</label
+                  ><input id="member_email" type="email" />
+                </div>
+                <div class="filter_control">
+                  <label for="corp_name">법인명</label
+                  ><input id="corp_name" type="text" />
+                </div>
+                <div class="filter_control">
+                  <label for="corp_number">법인번호</label
+                  ><input id="corp_number" type="text" />
+                </div>
+                <div class="filter_control">
+                  <label for="loan_consent">법인회원<br />승인여부</label
+                  ><select id="loan_consent">
+                    <option>선택</option>
+                    <option>Y</option>
+                    <option>N</option>
+                  </select>
+                </div>
+                <div class="filter_control">
+                  <label for="loan_officer">금융감독원<br />승인여부</label
+                  ><input id="loan_officer" type="text" />
+                </div>
+              </div>
+              <div class="date_filter">
+                <span class="date_label">가입일</span>
+                <div class="date_input_group">
+                  <input
+                    class="js_datepicker"
+                    type="text"
+                    aria-label="가입 시작일"
+                    autocomplete="off"
+                    inputmode="numeric"
+                  />
+                  <span class="date_dash">~</span>
+                  <input
+                    class="js_datepicker"
+                    type="text"
+                    aria-label="가입 종료일"
+                    autocomplete="off"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="period_buttons">
+                  <button type="button">1일</button
+                  ><button type="button">2주</button
+                  ><button class="active" type="button">1개월</button
+                  ><button type="button">3개월</button
+                  ><button type="button">6개월</button>
+                </div>
+              </div>
+              <div class="search_actions">
+                <button class="button outline" type="button">
+                  <span class="button_icon reset" aria-hidden="true"></span
+                  >초기화
+                </button>
+                <button class="button dark" type="submit">
+                  <span class="button_icon search" aria-hidden="true"></span
+                  >조회
+                </button>
+              </div>
+            </form>
+
+            <div class="list_toolbar">
+              <p class="list_count">총 <strong>3</strong> 건</p>
+              <button
+                class="button small outline lock_button"
+                type="button"
+                onclick="alertModal('danger', '로그인 잠금을 해제하시겠습니까?', '취소', '확인')"
+              >
+                로그인 잠금해제
+              </button>
+            </div>
+
+            <section class="table_surface" aria-label="법인회원 목록">
+              <div class="data_table_wrapper">
+                <table class="data_table corporate_table fixed_table">
+                  <caption class="sound_only">
+                    법인회원 목록
+                  </caption>
+                  <colgroup>
+                    <col style="width: 3.18%" />
+                    <col style="width: 13.6%" />
+                    <col style="width: 7.96%" />
+                    <col style="width: 9.28%" />
+                    <col style="width: 13.6%" />
+                    <col style="width: 13.26%" />
+                    <col style="width: 10.61%" />
+                    <col style="width: 120px" />
+                    <col style="width: 100px" />
+                    <col style="width: 110px" />
+                    <col style="width: 100px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        <input
+                          class="table_check"
+                          type="checkbox"
+                          checked
+                          aria-label="전체 선택"
+                        />
+                      </th>
+                      <th>아이디</th>
+                      <th>이름</th>
+                      <th>연락처</th>
+                      <th>이메일</th>
+                      <th>법인명</th>
+                      <th>법인번호</th>
+                      <th>가입일</th>
+                      <th>상태</th>
+                      <th>마지막<br />로그인 일시</th>
+                      <th>로그인<br />잠금여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input
+                          class="table_check"
+                          type="checkbox"
+                          checked
+                          aria-label="corp1 선택"
+                        />
+                      </td>
+                      <td>corp1</td>
+                      <td>한길동</td>
+                      <td>010-1234-5678</td>
+                      <td>trion@trioncorp.com</td>
+                      <td>트라이언코퍼레이션</td>
+                      <td>123456-7891111</td>
+                      <td>2026-06-15</td>
+                      <td>사용</td>
+                      <td>2026-06-30<br />17:34:18</td>
+                      <td>N</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          class="table_check"
+                          type="checkbox"
+                          aria-label="aadfa13 선택"
+                        />
+                      </td>
+                      <td>aadfa13</td>
+                      <td>김유리</td>
+                      <td>010-1234-5678</td>
+                      <td>yuri1234@naver.com</td>
+                      <td>스퀘어</td>
+                      <td>123456-7891111</td>
+                      <td>2026-06-15</td>
+                      <td>사용</td>
+                      <td>2026-06-30<br />17:34:18</td>
+                      <td>N</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          class="table_check"
+                          type="checkbox"
+                          checked
+                          aria-label="wewqt11 선택"
+                        />
+                      </td>
+                      <td>wewqt11</td>
+                      <td>홍라라</td>
+                      <td>010-1234-5678</td>
+                      <td>trion@trioncorp.com</td>
+                      <td>트라이언코퍼레이션</td>
+                      <td>123456-7891111</td>
+                      <td>2026-06-15</td>
+                      <td>미사용</td>
+                      <td>2026-06-30<br />17:34:18</td>
+                      <td>Y</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav class="paging" aria-label="페이지">
+                <a
+                  href="javascript:;"
+                  aria-label="첫 페이지"
+                  aria-disabled="true"
+                  class="paging_btn first disabled"
+                  >첫 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="이전 페이지"
+                  aria-disabled="true"
+                  class="paging_btn prev disabled"
+                  >이전 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="첫 페이지"
+                  class="paging_btn first"
+                  >첫 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="이전 페이지"
+                  class="paging_btn prev"
+                  >이전 페이지</a
+                >
+                <a
+                  class="paging_number active"
+                  href="javascript:;"
+                  aria-current="page"
+                  >1</a
+                >
+                <a class="paging_number" href="javascript:;">2</a>
+                <a class="paging_number" href="javascript:;">3</a>
+                <a class="paging_number" href="javascript:;">4</a>
+                <a
+                  href="javascript:;"
+                  aria-label="다음 페이지"
+                  class="paging_btn next"
+                  >다음 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="마지막 페이지"
+                  class="paging_btn last"
+                  >마지막 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="다음 페이지"
+                  aria-disabled="true"
+                  class="paging_btn next disabled"
+                  >다음 페이지</a
+                >
+                <a
+                  href="javascript:;"
+                  aria-label="마지막 페이지"
+                  aria-disabled="true"
+                  class="paging_btn last disabled"
+                  >마지막 페이지</a
+                >
+              </nav>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

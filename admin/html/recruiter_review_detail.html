@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">모집인 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">모집인조회</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >모집인 심사</a
+                >
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a href="javascript:;">법인회원</a>
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a href="javascript:;">팝업관리</a>
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">모집인 심사 상세</h1>
+            <div class="admin_breadcrumb">
+              <span>모집인 관리</span><span>모집인 심사</span>
+            </div>
+          </div>
+          <div class="review_detail">
+            <div class="review_detail_main">
+              <section class="review_summary">
+                <div class="review_summary_head">
+                  <h2 class="review_number">LC-10911201981</h2>
+                  <button class="button tiny outline" type="button">
+                    심사이력조회
+                  </button>
+                </div>
+                <div
+                  class="compact_info summary_info grid_3"
+                  role="table"
+                  aria-label="심사 요약"
+                >
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">구분</div>
+                    <div class="summary_info_value" role="cell">최초등록</div>
+                    <div class="summary_info_label" role="rowheader">
+                      요청일자
+                    </div>
+                    <div class="summary_info_value" role="cell">2027.01.12</div>
+                    <div class="summary_info_label" role="rowheader">
+                      요청만료예정일
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      2027.03.01 <span class="space"></span>
+                      <span class="d_day">D-40</span>
+                    </div>
+                  </div>
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">상태</div>
+                    <div class="summary_info_value" role="cell">
+                      처리대기<button class="button tiny light" type="button">
+                        처리
+                      </button>
+                    </div>
+                    <div class="summary_info_label" role="rowheader">
+                      심사완료일
+                    </div>
+                    <div class="summary_info_value" role="cell">2027.02.02</div>
+                    <div class="summary_info_label" role="rowheader">결제</div>
+                    <div class="summary_info_value" role="cell">
+                      결제완료 <span class="space"></span> 26.02.04
+                    </div>
+                  </div>
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">
+                      심사완료일
+                    </div>
+                    <div class="summary_info_value" role="cell">2027.02.02</div>
+                    <div class="summary_info_label" role="rowheader">
+                      가등록번호
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      LC12345648897
+                    </div>
+                    <div class="summary_info_label" role="rowheader">
+                      API 처리상태
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      2027.03.01 <span class="space"></span>
+                      <span class="d_day">Success</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="detail_section">
+                <h2 class="section_title">회원정보</h2>
+                <div
+                  class="compact_info summary_info grid_3 member_info_table"
+                  role="table"
+                  aria-label="회원정보"
+                >
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">이름</div>
+                    <div class="summary_info_value" role="cell">홍길동</div>
+                    <div class="summary_info_label" role="rowheader">
+                      생년월일
+                    </div>
+                    <div class="summary_info_value" role="cell">1988.12.12</div>
+                    <div class="summary_info_label" role="rowheader">성별</div>
+                    <div class="summary_info_value" role="cell">남자</div>
+                  </div>
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">
+                      내외국인
+                    </div>
+                    <div class="summary_info_value" role="cell">내국인</div>
+                    <div class="summary_info_label" role="rowheader">
+                      휴대전화번호
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      010-1234-5678
+                    </div>
+                    <div class="summary_info_label" role="rowheader">
+                      모집인상태
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      미등록　<button class="button tiny light" type="button">
+                        모집인이력조회
+                      </button>
+                    </div>
+                  </div>
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">계정</div>
+                    <div class="summary_info_value" role="cell">test102</div>
+                    <div class="summary_info_label" role="rowheader">
+                      이메일
+                    </div>
+                    <div class="summary_info_value" role="cell">
+                      test-email@test.com
+                    </div>
+                    <div class="summary_info_label" role="rowheader">
+                      계정상태
+                    </div>
+                    <div class="summary_info_value" role="cell">정상</div>
+                  </div>
+                  <div class="summary_info_row" role="row">
+                    <div class="summary_info_label" role="rowheader">
+                      가입일시
+                    </div>
+                    <div class="summary_info_value" role="cell">2026.12.12</div>
+                    <div class="summary_info_label" role="rowheader">
+                      최근 로그인
+                    </div>
+                    <div class="summary_info_value" role="cell">2026.12.31</div>
+                    <div class="summary_info_label" role="rowheader"></div>
+                    <div class="summary_info_value" role="cell"></div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="detail_section review_tabs_section">
+                <div class="segment_tabs individual_tabs" role="tablist">
+                  <button
+                    class="active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="tab-register"
+                    onclick="switchReviewTab(this, 'tab-register'); scrollToReviewTabs(this)"
+                  >
+                    등록정보
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab-contract"
+                    onclick="switchReviewTab(this, 'tab-contract'); scrollToReviewTabs(this)"
+                  >
+                    계약
+                  </button>
+                </div>
+                <div class="tab_panel active" id="tab-register" role="tabpanel">
+                  <table
+                    class="compact_info registration_info"
+                    aria-label="등록정보"
+                  >
+                    <colgroup>
+                      <col style="width: 200px" />
+                      <col />
+                      <col style="width: 200px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>모집인 분류</th>
+                        <td>개인</td>
+                        <th>주민번호</th>
+                        <td>950809-0000000</td>
+                      </tr>
+                      <tr>
+                        <th>CI</th>
+                        <td>1**************</td>
+                        <th>결격사유 및 범죄이력</th>
+                        <td>N</td>
+                      </tr>
+                      <tr>
+                        <th>말소이력</th>
+                        <td>N</td>
+                        <th>
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text"
+                              >금융상품유형</span
+                            ></span
+                          >
+                        </th>
+                        <td>대출</td>
+                      </tr>
+                      <tr>
+                        <th>신규/경력</th>
+                        <td>신규</td>
+                        <th>인증서번호/교육이수번호</th>
+                        <td>12345678910</td>
+                      </tr>
+                      <tr>
+                        <th>API 신규경력 구분결과</th>
+                        <td>신규</td>
+                        <th aria-hidden="true"></th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="exclusive_accordion">
+                    <button
+                      class="exclusive_toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="exclusive-information"
+                      onclick="toggleExclusiveAccordion(this)"
+                    >
+                      <span class="exclusive_counts">
+                        <span class="exclusive_count"
+                          ><span>대표</span><strong>1</strong></span
+                        ><i aria-hidden="true"></i>
+                        <span class="exclusive_count"
+                          ><span>임원</span><strong>0</strong></span
+                        ><i aria-hidden="true"></i>
+                        <span class="exclusive_count"
+                          ><span>업무</span><strong>2</strong></span
+                        ><i aria-hidden="true"></i>
+                        <span class="exclusive_count"
+                          ><span>전산</span><strong>1</strong></span
+                        >
+                      </span>
+                      <span class="exclusive_chevron" aria-hidden="true"></span>
+                    </button>
+                    <div
+                      class="exclusive_panel"
+                      id="exclusive-information"
+                      hidden
+                    >
+                      <h3 class="subsection_title">전속정보</h3>
+                      <table
+                        class="compact_info exclusive_info_table"
+                        aria-label="전속정보"
+                      >
+                        <colgroup>
+                          <col style="width: 140px" />
+                          <col />
+                          <col style="width: 140px" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>대표</th>
+                            <td>뉴올리언스(가나다) - 대출, 리스</td>
+                            <th>임원</th>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <th>업무수행인력</th>
+                            <td>다가져가라(123234254) - 대출, 리스</td>
+                            <th>전산</th>
+                            <td>가나다라(12324235) - 리스</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <section
+                    class="attachment_section"
+                    aria-labelledby="individual-attachments-title"
+                  >
+                    <h3
+                      class="subsection_title"
+                      id="individual-attachments-title"
+                    >
+                      첨부서류
+                    </h3>
+                    <div class="data_table_wrapper">
+                      <table
+                        class="data_table attachment_table individual_attachment_table fixed_table"
+                      >
+                        <colgroup>
+                          <col style="width: 25.95%" />
+                          <col style="width: 9.27%" />
+                          <col style="width: 25.95%" />
+                          <col style="width: 30.49%" />
+                          <col style="width: 90px" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>필수</th>
+                            <th>첨부파일</th>
+                            <th>체크 항목</th>
+                            <th><span class="sound_only">처리</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>사진</td>
+                            <td>Y</td>
+                            <td>
+                              <a class="link" href="javascript:;"
+                                >My profile.png</a
+                              >
+                            </td>
+                            <td>
+                              <label class="check"
+                                ><input type="checkbox" checked />신분증사진과
+                                일치 여부</label
+                              >
+                            </td>
+                            <td>
+                              <button class="button tiny outline" type="button">
+                                보완
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+                <div class="tab_panel" id="tab-contract" role="tabpanel">
+                  <table class="compact_info registration_info">
+                    <colgroup>
+                      <col style="width: 200px" />
+                      <col />
+                      <col style="width: 200px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>계약 구분</th>
+                        <td>대출 모집 위탁계약</td>
+                        <th>계약일</th>
+                        <td>2026.06.30</td>
+                      </tr>
+                      <tr>
+                        <th>계약 회원사</th>
+                        <td>현대캐피탈</td>
+                        <th>계약상태</th>
+                        <td>정상</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+            <aside class="review_rail" aria-label="심사 처리 영역">
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>담당자</th>
+                      <td>이실무</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>상태</th>
+                      <td>상신</td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>해지 요청으로 부적격 처리 필요</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>김중간</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>심사</th>
+                      <td>상신</td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>부적격 필요</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article class="review_card review_action_card active_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>박최고</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th><label for="review-memo-detail">메모</label></th>
+                      <td>
+                        <textarea
+                          class="review_memo"
+                          id="review-memo-detail"
+                          placeholder="부적격 전결 처리함"
+                        ></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="review_actions">
+                  <button class="button tiny outline" type="button">
+                    보완요청</button
+                  ><button class="button tiny light" type="button">
+                    협회반려</button
+                  ><button class="button tiny blue-outline" type="button">
+                    승인</button
+                  ><button class="button tiny danger-outline" type="button">
+                    부적격
+                  </button>
+                </div>
+              </article>
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>김중간</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>심사</th>
+                      <td>
+                        <span class="tag">승인</span>
+                        <span class="tag dark">보완요청</span>
+                        <span class="tag gray">협회반려</span>
+                        <span class="tag red">부적격</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>부적격 필요</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

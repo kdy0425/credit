@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header id="header">
+        <div class="container header_inner">
+          <a class="header_logo" href="javascript:;">
+            <img src="../assets/images/logo.png" alt="여신금융협회" />
+          </a>
+          <nav class="header_nav" aria-label="주요 메뉴">
+            <a href="javascript:;">대출모집인 제도</a>
+            <a href="javascript:;">대출모집인조회</a>
+            <a href="javascript:;">보수교육수료정보 조회</a>
+            <a href="javascript:;">나의 대출 모집인 등록/조회</a>
+            <a href="javascript:;">공지사항</a>
+          </nav>
+          <div class="header_auth">
+            <a class="header_login" href="javascript:;">로그인</a>
+            <a class="header_login is_logout" href="javascript:;">로그아웃</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="site_main sub_content faq_content">
+        <div class="container">
+          <div class="breadcrumb"><span>자주 묻는 질문</span></div>
+          <h1 class="page_title">자주 묻는 질문</h1>
+          <section class="faq_wrap" id="faq_list"></section>
+        </div>
+      </main>
+      <div class="partner_bar">
+        <div class="partner_list">
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="은행연합회"
+            ><img
+              src="../assets/images/partner-federation.png"
+              alt="은행연합회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="저축은행중앙회"
+            ><img src="../assets/images/partner-bank.png" alt="저축은행중앙회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="생명보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-savings.png"
+                alt="생명보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="손해보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-life.png"
+                alt="손해보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="신협"
+            ><span
+              ><img
+                src="../assets/images/partner-capital.png"
+                alt="신협" /></span
+          ></a>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div class="footer_top">
+            <img
+              class="footer_logo"
+              src="../assets/images/footer-logo.png"
+              alt="여신금융협회"
+            />
+            <div class="footer_columns">
+              <div class="footer_company">
+                <p><span>상호명</span> (사)한국여신전문금융업협회</p>
+                <p>
+                  <span>대표자</span> 정완규 <i></i>
+                  <span>사업자등록번호</span> 202-82-05723
+                </p>
+                <p><span>대표전화</span> 02-2011-0770</p>
+              </div>
+              <div class="footer_address">
+                <p>
+                  서울특별시 중구 다동길 43 (다동70번지) 한외빌딩12~13층
+                  여신금융협회 (04521)
+                </p>
+                <p>
+                  COPYRIGHT © THE CREDIT FINANCE ASSOCIATION ALL RIGHTS
+                  RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_links">
+            <a href="javascript:;"
+              ><img
+                src="../assets/images/footer-book.svg"
+                alt=""
+              />개인정보처리방침</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-mail.svg" alt="" />이용약관</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-rules.svg" alt="" />관련규정</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-chat.svg" alt="" />FAQ</a
+            >
+          </div>
+        </div>
+      </footer>
+      <script>
+        const questions = [
+          "모집인 등록정보 변동보고 안내(개인 / 법인 공통)",
+          "모집인 등록정보 변동보고 안내(법인)",
+          "대출성상품 모집인 등록 처리절차 안내",
+          "대출성상품 모집인 교육관련 안내",
+          "대출성상품 모집인 교육관련 안내",
+          "모집인 교육 이수 시 경력/신규 구분 관련 안내",
+          "계약 금융회사 또는 소속 모집법인 변경 및 이직 시 처리절차",
+          "휴대폰번호 변경 시 처리절차",
+          "개명하거나, 주민등록번호가 변경된 경우 처리절차",
+        ];
+
+        const tableAnswer = `
+                <table class="faq_table">
+                    <colgroup>
+                        <col style="width:33%">
+                        <col style="width:33%">
+                        <col style="width:33%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>변동사항</th>
+                            <th>조치방안</th>
+                            <th>상세내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>위탁 금융회사 추가·변경</td>
+                            <td>정보변경</td>
+                            <td>기존 위탁 금융회사 등록정보를 해지처리하고, 신규 위탁 금융회사는 기존 등록정보를 활용(다른 계약 불러오기)하여 추가</td>
+                        </tr>
+                        <tr>
+                            <td>취급 상품(대출/리스할부) 추가·변경</td>
+                            <td>등록 필요</td>
+                            <td>추가나 변경하고자 하는 상품의 교육 이수 및 평가 인증 후 협회 등록 필요(등록 신청시 기존 등록정보 활용 가능)</td>
+                        </tr>
+                        <tr>
+                            <td>개인 또는 법인의 대표자 및 임원이 결격사유가 생긴 경우</td>
+                            <td>결격사유 발생일로부터 1개월 이내에 변동보고</td>
+                            <td>정보변경 신청을 통해 변동보고</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+        const defaultAnswer =
+          "대출성상품 모집인 등록 전에 각 상품별 신규·경력별 해당 교육을 이수하고 필요한 평가를 통해 인증을 획득하여야 합니다.";
+        const detailAnswer = `
+                <div class="faq_answer_text">
+                    <p>대출성상품 모집인은 등록 전에 각 상품(대출/리스・할부)별, 신규/경력별 해당 교육을 이수하고, 신규 모집인인 경우에는 평가를 통해 인증을 획득하여야 합니다.</p>
+                    <p>대출모집인, 리스할부모집인을 겸업하는 경우에는 두 가지 교육과정을 모두 이수하여야하며, 신규 모집인인 경우 각각 평가를 통해 인증을 획득하여야 합니다.</p>
+                    <p>오토론 취급 모집인은 금융소비자 보호에 관한 감독규정 제22조제1호바목에 따라 리스・할부와 유사한 금융상품으로 취급되어, 리스・할부 교육을 이수하고 신규 모집인인 경우 리스・할부 평가를 통해 인증을 획득한 후, 리스・할부 모집인으로 등록을 신청하면 됩니다.</p>
+                </div>
+            `;
+
+        document.getElementById("faq_list").innerHTML = questions
+          .map((question, index) => {
+            const isOpen = index === 3 || index === 4;
+            return `
+                    <article class="faq_item ${isOpen ? "active" : ""}">
+                        <button class="faq_q js_faq_toggle" type="button" aria-expanded="${isOpen}">${question}</button>
+                        <div class="faq_a">
+                            <div class="faq_answer_inner">${index === 3 ? tableAnswer : index === 4 ? detailAnswer : defaultAnswer}</div>
+                        </div>
+                    </article>
+                `;
+          })
+          .join("");
+
+        document.querySelectorAll(".js_faq_toggle").forEach((button) => {
+          button.addEventListener("click", () => {
+            const item = button.closest(".faq_item");
+            const willOpen = !item.classList.contains("active");
+
+            item.classList.toggle("active", willOpen);
+            button.setAttribute("aria-expanded", String(willOpen));
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

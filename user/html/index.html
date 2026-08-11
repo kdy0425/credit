@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header id="header">
+        <div class="container header_inner">
+          <a class="header_logo" href="javascript:;">
+            <img src="../assets/images/logo.png" alt="여신금융협회" />
+          </a>
+          <nav class="header_nav" aria-label="주요 메뉴">
+            <a href="javascript:;">대출모집인 제도</a>
+            <a href="javascript:;">대출모집인조회</a>
+            <a href="javascript:;">보수교육수료정보 조회</a>
+            <a href="javascript:;">나의 대출 모집인 등록/조회</a>
+            <a href="javascript:;">공지사항</a>
+          </nav>
+          <div class="header_auth">
+            <a class="header_login" href="javascript:;">로그인</a>
+            <a class="header_login is_logout" href="javascript:;">로그아웃</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="site_main">
+        <section class="intro_hero">
+          <div class="container intro_hero_inner">
+            <div class="intro_copy">
+              <div class="intro_text">
+                <h1>대출모집인 조회</h1>
+                <ul class="dot_list">
+                  <li>대출상담사 등록번호를 입력해야 조회 가능합니다.</li>
+                  <li>
+                    조회가능정보 : 대출모집인의 등록번호, 성명, 연락처, 계약
+                    금융회사, 취급상품, 계약일자 등
+                  </li>
+                </ul>
+                <a class="small_button" href="javascript:;">
+                  등록증 발급하기
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.25 2H4.25C3.00736 2 2 3.00735 2 4.24999V11.75C2 12.9926 3.00736 14 4.25 14H11.75C12.9926 14 14 12.9926 14 11.75V8.74996M14 5.37507V2L10.2496 2.00018M14 2L7.62445 8.37478"
+                      stroke="#588FED"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <img
+                class="intro_object"
+                src="../assets/images/intro-object.png"
+                alt="등록증 조회 안내"
+              />
+            </div>
+
+            <form class="intro_search js_intro_search">
+              <div class="tabs">
+                <a class="active" href="javascript:;" data-intro-tab="person"
+                  >개인</a
+                >
+                <a href="javascript:;" data-intro-tab="company">법인</a>
+              </div>
+              <div class="fields">
+                <div class="field">
+                  <label for="intro_no">등록번호</label>
+                  <input
+                    id="intro_no"
+                    type="text"
+                    placeholder="예) 10-000000000"
+                  />
+                </div>
+                <div class="field js_intro_name_field">
+                  <label for="intro_name">이름</label>
+                  <input
+                    id="intro_name"
+                    type="text"
+                    placeholder="이름을 입력해주세요."
+                  />
+                </div>
+              </div>
+              <button class="btn_primary" type="submit">조회</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="container notice_caution">
+          <h2 class="caution_title">
+            대출시 유의사항
+            <span
+              >대출상담사 사진과 실제 얼굴 대조확인! 어떤 명목으로도 돈 송금
+              절대금지!</span
+            >
+          </h2>
+          <ul class="dot_list">
+            <li>
+              대출상담사가 제공한 휴대전화번호로 직접 통화하여 사칭여부를
+              확인하시기 바랍니다.
+            </li>
+            <li>
+              대출상담사와 직접 만나 사진과 얼굴을 대조하여 본인여부를 반드시
+              점검하시기 바랍니다.
+            </li>
+            <li>
+              대출상담사는 어떠한 이유로도 절대로 돈을 요구하거나, 보안카드 번호
+              전체를 요구하지 않습니다.
+            </li>
+          </ul>
+        </section>
+      </main>
+      <div class="partner_bar">
+        <div class="partner_list">
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="은행연합회"
+            ><img
+              src="../assets/images/partner-federation.png"
+              alt="은행연합회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="저축은행중앙회"
+            ><img src="../assets/images/partner-bank.png" alt="저축은행중앙회"
+          /></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="생명보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-savings.png"
+                alt="생명보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="손해보험협회"
+            ><span
+              ><img
+                src="../assets/images/partner-life.png"
+                alt="손해보험협회" /></span
+          ></a>
+          <a
+            class="partner_item"
+            href="javascript:;"
+            target="_blank"
+            title="신협"
+            ><span
+              ><img
+                src="../assets/images/partner-capital.png"
+                alt="신협" /></span
+          ></a>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div class="footer_top">
+            <img
+              class="footer_logo"
+              src="../assets/images/footer-logo.png"
+              alt="여신금융협회"
+            />
+            <div class="footer_columns">
+              <div class="footer_company">
+                <p><span>상호명</span> (사)한국여신전문금융업협회</p>
+                <p>
+                  <span>대표자</span> 정완규 <i></i>
+                  <span>사업자등록번호</span> 202-82-05723
+                </p>
+                <p><span>대표전화</span> 02-2011-0770</p>
+              </div>
+              <div class="footer_address">
+                <p>
+                  서울특별시 중구 다동길 43 (다동70번지) 한외빌딩12~13층
+                  여신금융협회 (04521)
+                </p>
+                <p>
+                  COPYRIGHT © THE CREDIT FINANCE ASSOCIATION ALL RIGHTS
+                  RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_links">
+            <a href="javascript:;"
+              ><img
+                src="../assets/images/footer-book.svg"
+                alt=""
+              />개인정보처리방침</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-mail.svg" alt="" />이용약관</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-rules.svg" alt="" />관련규정</a
+            >
+            <a href="javascript:;"
+              ><img src="../assets/images/footer-chat.svg" alt="" />FAQ</a
+            >
+          </div>
+        </div>
+      </footer>
+      <script>
+        (function () {
+          const form = document.querySelector(".js_intro_search");
+
+          if (!form) return;
+
+          const tabs = [...form.querySelectorAll("[data-intro-tab]")];
+          const nameField = form.querySelector(".js_intro_name_field");
+
+          tabs.forEach((tab) => {
+            tab.addEventListener("click", (event) => {
+              event.preventDefault();
+
+              const isCompany = tab.dataset.introTab === "company";
+
+              tabs.forEach((item) =>
+                item.classList.toggle("active", item === tab),
+              );
+
+              if (nameField) {
+                nameField.hidden = isCompany;
+
+                const nameInput = nameField.querySelector("input");
+                if (nameInput) {
+                  nameInput.disabled = isCompany;
+                  if (isCompany) nameInput.value = "";
+                }
+              }
+            });
+          });
+        })();
+      </script>
+    </div>
+  </body>
+</html>

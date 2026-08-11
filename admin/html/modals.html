@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집인 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집인조회</a>
+                <a href="javascript:;">모집인 심사</a>
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a href="javascript:;">법인회원</a>
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">서비스관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >팝업관리</a
+                >
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">공통 모달</h1>
+            <div class="admin_breadcrumb">
+              <span>관리자</span><span>공통 모달</span>
+            </div>
+          </div>
+          <section class="modal_showcase_page">
+            <div class="modal_showcase">
+              <article class="modal_example">
+                <h2>알림</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="alertModal('danger', '수정 하시겠습니까?', '취소', '확인')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>회원정보(개인)</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-member')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>담당자 지정/변경</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-assignee')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>서류 보완 요청</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-supplement')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>법인 정보</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-corporation')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>회원사 수정</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-company-edit')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>업로드</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-upload')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>심사 보완 요청</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-review-supplement')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>심사 처리 이력</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="modalShow('#modal-history')"
+                >
+                  모달 열기
+                </button>
+              </article>
+              <article class="modal_example">
+                <h2>로그인 잠금해제</h2>
+                <button
+                  class="button small outline"
+                  type="button"
+                  onclick="alertModal('danger', '로그인 잠금을 해제하시겠습니까?', '취소', '확인')"
+                >
+                  모달 열기
+                </button>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-member" aria-hidden="true">
+      <section
+        class="admin_modal size-800"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-member-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-member-title">
+            회원정보(개인)
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">이름</th>
+                <td>홍길동</td>
+                <th scope="row">생년월일</th>
+                <td>1989.05.15</td>
+              </tr>
+              <tr>
+                <th scope="row">성별</th>
+                <td>남</td>
+                <th scope="row">내외국인</th>
+                <td>내국인</td>
+              </tr>
+              <tr>
+                <th scope="row">휴대폰전화번호</th>
+                <td>010-1234-5687</td>
+                <th scope="row">아이디</th>
+                <td>hello1234</td>
+              </tr>
+              <tr>
+                <th scope="row">계정상태</th>
+                <td>정상</td>
+                <th scope="row">이메일</th>
+                <td>test@test.com</td>
+              </tr>
+              <tr>
+                <th scope="row">마지막 로그인 일시</th>
+                <td>2026.07.01 12:22:12</td>
+                <th scope="row" aria-hidden="true"></th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-assignee" aria-hidden="true">
+      <section
+        class="admin_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-assignee-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-assignee-title">
+            담당자 지정/변경
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="showcase-assignee">실무자</label>
+                </th>
+                <td>
+                  <div class="input_group">
+                    <select class="modal_select" id="showcase-assignee">
+                      <option>전체</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="showcase-middle">중간관리자</label>
+                </th>
+                <td>
+                  <div class="input_group">
+                    <input
+                      class="modal_input is-muted"
+                      id="showcase-middle"
+                      type="text"
+                      value="이중간(efglee)"
+                      readonly
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="showcase-final">최종관리자</label>
+                </th>
+                <td>
+                  <div class="input_group">
+                    <input
+                      class="modal_input is-muted"
+                      id="showcase-final"
+                      type="text"
+                      value="이최종(abclee)"
+                      readonly
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="showcase-assignee-reason">변경 사유</label>
+                </th>
+                <td class="textarea_cell">
+                  <div class="input_group">
+                    <textarea
+                      class="modal_textarea"
+                      id="showcase-assignee-reason"
+                      placeholder="변경 사유를 입력해 주세요."
+                    ></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            저장
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-supplement" aria-hidden="true">
+      <section
+        class="admin_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-supplement-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-supplement-title">
+            서류 보완 요청
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">서류구분</th>
+                <td data-modal-document>교육수료증</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="showcase-supplement-reason">보완사유</label>
+                </th>
+                <td class="textarea_cell">
+                  <div class="input_group">
+                    <select class="modal_select">
+                      <option>직접 입력</option>
+                    </select>
+                  </div>
+                  <div class="input_group">
+                    <textarea
+                      class="modal_textarea"
+                      id="showcase-supplement-reason"
+                      placeholder="TEXT EDITOR (ROWS: 3)"
+                    ></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            저장
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-corporation" aria-hidden="true">
+      <section
+        class="admin_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-corporation-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-corporation-title">
+            법인 정보
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="corporation-name">법인명</label>
+                </th>
+                <td>
+                  <div class="input_group">
+                    <input
+                      class="modal_input"
+                      id="corporation-name"
+                      type="text"
+                      placeholder="법인명을 입력해 주세요."
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="corporation-number">법인번호</label>
+                </th>
+                <td>
+                  <div class="input_group">
+                    <input
+                      class="modal_input"
+                      id="corporation-number"
+                      type="text"
+                      placeholder="법인번호(-포함) 14자리를 입력해 주세요."
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">금융감독원<br />승인여부</th>
+                <td>
+                  <label class="radio"
+                    ><input type="radio" name="corporation-approved" /> Y</label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="corporation-approved" /> N</label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">회원사 선택</th>
+                <td>
+                  <div class="modal_check_list">
+                    <label class="check"
+                      ><input type="checkbox" /> AJ캐피탈파트너스</label
+                    >
+                    <label class="check"
+                      ><input type="checkbox" /> 신은캐피탈</label
+                    >
+                    <label class="check"
+                      ><input type="checkbox" /> 미래에셋캐피탈</label
+                    >
+                    <label class="check"
+                      ><input type="checkbox" /> 하나카드</label
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            확인
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div
+      class="admin_modal_backdrop"
+      id="modal-company-edit"
+      aria-hidden="true"
+    >
+      <section
+        class="admin_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-company-edit-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-company-edit-title">
+            회원사 수정
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">회원사코드</th>
+                <td><strong class="modal_code">3000001111</strong></td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="company-name">회원사명</label></th>
+                <td>
+                  <div class="input_group">
+                    <input
+                      class="modal_input"
+                      id="company-name"
+                      type="text"
+                      value="트라이언코퍼레이션"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">모집활동 여부</th>
+                <td>
+                  <label class="radio"
+                    ><input type="radio" name="recruiting-active" checked />
+                    Y</label
+                  >
+                  <label class="radio"
+                    ><input type="radio" name="recruiting-active" /> N</label
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="company-file">첨부파일</label></th>
+                <td>
+                  <div class="input_group">
+                    <span class="file_input">
+                      <input
+                        class="modal_input"
+                        id="company-file"
+                        type="text"
+                        placeholder="선택된 파일 없음"
+                        readonly
+                      />
+                      <button
+                        class="file_remove"
+                        type="button"
+                        aria-label="선택 파일 삭제"
+                      >
+                        삭제
+                      </button>
+                    </span>
+                    <input
+                      class="file_native"
+                      id="company-file-native"
+                      type="file"
+                    />
+                    <label class="button tiny light" for="company-file-native"
+                      >파일 선택</label
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            저장
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-upload" aria-hidden="true">
+      <section
+        class="admin_modal size-500"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-upload-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-upload-title">업로드</h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <p class="modal_lead">업로드 파일을 선택해 주세요.</p>
+          <table class="modal_table modal_upload_table">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="input_group">
+                    <span class="file_input has_file">
+                      <input
+                        class="modal_input"
+                        id="upload-file"
+                        type="text"
+                        value="결격요건업로드.xlsx"
+                        readonly
+                      />
+                      <button
+                        class="file_remove"
+                        type="button"
+                        aria-label="선택 파일 삭제"
+                      >
+                        삭제
+                      </button>
+                    </span>
+                    <input
+                      class="file_native"
+                      id="upload-file-native"
+                      type="file"
+                      accept=".xlsx,.xls"
+                    />
+                    <label class="button tiny light" for="upload-file-native"
+                      >파일 선택</label
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            저장
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div
+      class="admin_modal_backdrop"
+      id="modal-review-supplement"
+      aria-hidden="true"
+    >
+      <section
+        class="admin_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-review-supplement-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-review-supplement-title">
+            심사 보완 요청
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <p class="modal_lead">
+            아래의 정보로<br />보완요청을 진행하시겠습니까?
+          </p>
+          <table class="modal_table">
+            <tbody>
+              <tr>
+                <th scope="row">서류구분</th>
+                <td>최초등록심사</td>
+              </tr>
+              <tr>
+                <th scope="row">보완요청서류</th>
+                <td>
+                  <ul class="modal_document_list" data-review-documents>
+                    <li>교육수료증 - 잘못된 서류 첨부</li>
+                    <li>경력증명서 - 기타 : 개인정보 노출</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">보완요청사유</th>
+                <td>
+                  <strong class="modal_value_danger"
+                    >일부 잘못된 서류 첨부</strong
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer class="admin_modal_footer">
+          <button
+            class="button outline"
+            type="button"
+            onclick="modalHide(this)"
+          >
+            취소
+          </button>
+          <button class="button dark" type="button" onclick="modalHide(this)">
+            저장
+          </button>
+        </footer>
+      </section>
+    </div>
+
+    <div class="admin_modal_backdrop" id="modal-history" aria-hidden="true">
+      <section
+        class="admin_modal size-800"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-history-title"
+      >
+        <header class="admin_modal_header">
+          <h2 class="admin_modal_title" id="modal-history-title">
+            심사 처리 이력
+          </h2>
+          <button
+            class="admin_modal_close"
+            type="button"
+            aria-label="닫기"
+            onclick="modalHide(this)"
+          >
+            닫기
+          </button>
+        </header>
+        <div class="admin_modal_body">
+          <table class="history_summary_table">
+            <colgroup>
+              <col style="width: 95px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">심사번호</th>
+                <td><strong>LC-10911201981</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="data_table history_table">
+            <colgroup>
+              <col style="width: 160px" />
+              <col style="width: 120px" />
+              <col style="width: 150px" />
+              <col style="width: 120px" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">상태</th>
+                <th scope="col">처리자</th>
+                <th scope="col">처리일시</th>
+                <th scope="col">요청경로</th>
+                <th scope="col">설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>접수</strong></td>
+                <td>한길동</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>API 전송완료</td>
+              </tr>
+              <tr>
+                <td><strong>승인요청</strong></td>
+                <td>김영수</td>
+                <td>26.06.30 14:00</td>
+                <td>FFO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>승인완료</strong></td>
+                <td>한길동</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>심사중</strong></td>
+                <td>박사랑</td>
+                <td>26.06.30 14:00</td>
+                <td>BO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>보완요청</strong></td>
+                <td>박사랑</td>
+                <td>26.06.30 14:00</td>
+                <td>BO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>재요청(보완완료)</strong></td>
+                <td>김순자</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>보완완료</td>
+              </tr>
+              <tr>
+                <td><strong>승인(상신)</strong></td>
+                <td>김영숙</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>전결</strong></td>
+                <td>박영숙</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>결제대기</strong></td>
+                <td>-</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><strong>처리대기</strong></td>
+                <td>박경수</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>결제완료</td>
+              </tr>
+              <tr>
+                <td><strong>처리완료</strong></td>
+                <td>박사랑</td>
+                <td>26.06.30 14:00</td>
+                <td>CFO</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

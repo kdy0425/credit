@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header id="header">
+        <div class="container header_inner">
+          <a class="header_logo" href="javascript:;">
+            <img src="../assets/images/logo.png" alt="여신금융협회" />
+          </a>
+          <nav class="header_nav" aria-label="주요 메뉴">
+            <a href="javascript:;">대출모집인 제도</a>
+            <a href="javascript:;">대출모집인조회</a>
+            <a href="javascript:;">보수교육수료정보 조회</a>
+            <a href="javascript:;">나의 대출 모집인 등록/조회</a>
+            <a href="javascript:;">공지사항</a>
+          </nav>
+          <div class="header_auth">
+            <a class="header_login" href="javascript:;">로그인</a>
+          </div>
+        </div>
+      </header>
+      <main class="site_main sub_content additional_page company_member_page">
+        <div class="container">
+          <div class="breadcrumb"><span>법인 회원가입</span></div>
+          <h1 class="compact_title">법인 회원가입</h1>
+          <div class="stepper">
+            <div class="step">
+              <b>1</b>
+              <span>약관동의</span>
+            </div>
+            <div class="step active">
+              <b>2</b>
+              <span>정보입력</span>
+            </div>
+            <div class="step">
+              <b>3</b>
+              <span>가입완료</span>
+            </div>
+          </div>
+          <h2 class="section_title">기본정보</h2>
+          <div class="form_table_wrap">
+            <table class="form_table">
+              <colgroup>
+                <col style="width: 220px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="form_label" scope="row">아이디</th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <input
+                        class="text_input w_form"
+                        value="test1234"
+                        readonly
+                      />
+                      <button type="button" class="button small">
+                        휴대폰 인증
+                      </button>
+                      <button type="button" class="button small">
+                        아이핀 인증
+                      </button>
+                      <span class="caption form_caption_break"
+                        >※ 미등록 회원인 경우에만 인증을 통해서 정보 수정 가능.
+                        등록된 모집인은 등록정보변경을 통해 진행</span
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">비밀번호</th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <button type="button" class="button small">
+                        비밀번호 변경
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">성명</th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <span class="value">오태진</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">생년월일</th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <span class="value">1991.02.01</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">성별</th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <span class="value">남자</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">
+                    내외국인 여부
+                    <span class="required">*</span>
+                  </th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <span class="value">내국인</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">
+                    휴대전화번호
+                    <span class="required">*</span>
+                  </th>
+                  <td class="form_cell">
+                    <div class="input_group">
+                      <input
+                        class="text_input w_form"
+                        placeholder="'-'를 제외한 휴대전화번호를 입력해주세요"
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">
+                    이메일
+                    <span class="required">*</span>
+                  </th>
+                  <td class="form_cell">
+                    <div class="input_group email_group">
+                      <input class="text_input w_sm" value="trion1234" />
+                      <span>@</span>
+                      <input
+                        class="text_input w_sm"
+                        value="crefia.or.kr"
+                        data-email-domain-input
+                      />
+                      <select data-selectbox data-email-domain>
+                        <option value="manual">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">
+                    선택적알림 수신여부
+                    <span class="required">*</span>
+                    <small class="form_label_note">알림항목: 공지사항</small>
+                  </th>
+                  <td class="form_cell">
+                    <div class="input_group notification_group">
+                      <div class="notification_row radio_group">
+                        <label class="control_label"
+                          ><input
+                            type="radio"
+                            name="notice_agree_1"
+                            checked
+                          />동의</label
+                        >
+                        <label class="control_label"
+                          ><input
+                            type="radio"
+                            name="notice_agree_1"
+                          />미동의</label
+                        >
+                        <div class="notification_channels">
+                          <label class="control_label"
+                            ><input type="checkbox" checked />이메일</label
+                          >
+                          <label class="control_label"
+                            ><input type="checkbox" />SNS</label
+                          >
+                        </div>
+                      </div>
+                      <div class="notification_row radio_group">
+                        <label class="control_label"
+                          ><input
+                            type="radio"
+                            name="notice_agree_2"
+                          />동의</label
+                        >
+                        <label class="control_label"
+                          ><input
+                            type="radio"
+                            name="notice_agree_2"
+                            checked
+                          />미동의</label
+                        >
+                        <div class="notification_channels">
+                          <label class="control_label"
+                            ><input type="checkbox" disabled />이메일</label
+                          >
+                          <label class="control_label"
+                            ><input type="checkbox" disabled />SNS</label
+                          >
+                        </div>
+                      </div>
+                      <p class="caption">
+                        ※ 모집인 등록/심사 절차 안내, 결제 안내 등 필수 알림은
+                        선택적 알림 수신 여부와 관계 없이 송신 됩니다.
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="form_label" scope="row">
+                    주민등록본(초본)
+                    <span class="required">*</span>
+                  </th>
+                  <td class="form_cell" data-file-upload>
+                    <div class="input_group">
+                      <input
+                        class="text_input w_form"
+                        value="260805_초본파일.pdf"
+                        readonly
+                        data-file-name
+                        data-empty-text="첨부된 파일이 없습니다."
+                      />
+                      <input
+                        type="file"
+                        name="resident_record_file"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        hidden
+                        data-file-input
+                      />
+                      <button
+                        type="button"
+                        class="button small blue"
+                        data-file-select
+                      >
+                        파일 선택
+                      </button>
+                      <span class="caption"
+                        >※ 최대1개, 00MB까지 첨부가 가능합니다.</span
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="button_row is_between">
+            <button class="button">회원탈퇴</button>
+            <div>
+              <button class="button light">취소</button>
+              <button
+                type="button"
+                class="button primary"
+                onclick="alertModal('danger', '수정하시겠습니까?', '취소', '확인')"
+              >
+                수정
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="partner_bar">
+        <div class="partner_list">
+          <a class="partner_item" href="javascript:;">
+            <img
+              src="../assets/images/partner-federation.png"
+              alt="은행연합회"
+            />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img src="../assets/images/partner-bank.png" alt="저축은행중앙회" />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img
+              src="../assets/images/partner-savings.png"
+              alt="생명보험협회"
+            />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img src="../assets/images/partner-life.png" alt="손해보험협회" />
+          </a>
+          <a class="partner_item" href="javascript:;"
+            ><img src="../assets/images/partner-capital.png" alt="신협"
+          /></a>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div class="footer_top">
+            <img
+              class="footer_logo"
+              src="../assets/images/footer-logo.png"
+              alt="여신금융협회"
+            />
+            <div class="footer_columns">
+              <div class="footer_company">
+                <p>
+                  <span>상호명</span>
+                  (사)한국여신전문금융업협회
+                </p>
+                <p>
+                  <span>대표자</span>
+                  정완규
+                  <i></i>
+                  <span>사업자등록번호</span>
+                  202-82-05723
+                </p>
+                <p>
+                  <span>대표전화</span>
+                  02-2011-0770
+                </p>
+              </div>
+              <div class="footer_address">
+                <p>
+                  서울특별시 중구 다동길 43 (다동70번지) 한외빌딩12~13층
+                  여신금융협회 (04521)
+                </p>
+                <p>
+                  COPYRIGHT © THE CREDIT FINANCE ASSOCIATION ALL RIGHTS
+                  RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_links">
+            <a href="javascript:;">
+              <img src="../assets/images/footer-book.svg" alt="" />
+              개인정보처리방침
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-mail.svg" alt="" />
+              이용약관
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-rules.svg" alt="" />
+              관련규정
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-chat.svg" alt="" />
+              FAQ
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

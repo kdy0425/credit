@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../admin/assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script
+      defer
+      src="../../admin/assets/vendor/flatpickr/4.6.13/flatpickr.js"
+    ></script>
+    <script
+      defer
+      src="../../admin/assets/vendor/flatpickr/4.6.13/ko.js"
+    ></script>
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body>
+    <div id="layout">
+      <header id="header">
+        <div class="container header_inner">
+          <a class="header_logo" href="javascript:;">
+            <img src="../assets/images/logo.png" alt="여신금융협회" />
+          </a>
+          <nav class="header_nav" aria-label="주요 메뉴">
+            <a href="javascript:;">대출모집인 제도</a>
+            <a href="javascript:;">대출모집인조회</a>
+            <a href="javascript:;">보수교육수료정보 조회</a>
+            <a href="javascript:;">나의 대출 모집인 등록/조회</a>
+            <a href="javascript:;">공지사항</a>
+          </nav>
+          <div class="header_auth">
+            <a class="header_login" href="javascript:;">로그인</a>
+          </div>
+        </div>
+      </header>
+      <main class="site_main sub_content additional_page">
+        <div class="container">
+          <div class="breadcrumb"><span>소속모집인 조회</span></div>
+          <h1 class="compact_title">소속모집인 조회</h1>
+          <form class="search_filter">
+            <p class="caption">
+              ※ 법인 사원번호로 등록한 모집인 중 정보
+              <span class="caption_primary"
+                >이용 약관에 동의한 모집인만 조회 됩니다.</span
+              >
+            </p>
+            <table class="filter_table">
+              <colgroup>
+                <col class="filter_label_col" />
+                <col />
+                <col class="filter_label_col" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="filter_label" scope="row">금융상품유형</th>
+                  <td class="filter_cell">
+                    <div class="input_group">
+                      <select data-selectbox>
+                        <option>선택</option>
+                        <option>대출</option>
+                        <option>리스</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="filter_label" scope="row">금융회사</th>
+                  <td class="filter_cell">
+                    <div class="input_group">
+                      <select data-selectbox>
+                        <option>선택</option>
+                        <option>여신캐피탈</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="filter_label" scope="row">모집인등록번호</th>
+                  <td class="filter_cell">
+                    <div class="input_group">
+                      <input
+                        class="text_input w_form"
+                        placeholder="00-000000000"
+                      />
+                    </div>
+                  </td>
+                  <th class="filter_label" scope="row">이름+생년월일</th>
+                  <td class="filter_cell">
+                    <div class="input_group">
+                      <input class="text_input w_sm" placeholder="성명" />
+                      <input
+                        class="text_input js_datepicker"
+                        type="text"
+                        aria-label="생년월일"
+                        autocomplete="off"
+                        inputmode="numeric"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="date_filter_table">
+              <colgroup>
+                <col class="date_label_col" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="date_label" scope="row">계약(예정)일자</th>
+                  <td class="date_cell">
+                    <div class="input_group date_controls">
+                      <input
+                        class="text_input js_datepicker"
+                        type="text"
+                        aria-label="계약 예정 시작일"
+                        autocomplete="off"
+                        inputmode="numeric"
+                      />
+                      <span>-</span>
+                      <input
+                        class="text_input js_datepicker"
+                        type="text"
+                        aria-label="계약 예정 종료일"
+                        autocomplete="off"
+                        inputmode="numeric"
+                        data-default-today
+                      />
+                      <button type="button" class="range_button" data-range>
+                        1일
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        1주
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        1개월
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        3개월
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        6개월
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="date_label" scope="row">위탁(예정)일자</th>
+                  <td class="date_cell">
+                    <div class="input_group date_controls">
+                      <input
+                        class="text_input js_datepicker"
+                        type="text"
+                        aria-label="위탁 예정 시작일"
+                        autocomplete="off"
+                        inputmode="numeric"
+                      />
+                      <span>-</span>
+                      <input
+                        class="text_input js_datepicker"
+                        type="text"
+                        aria-label="위탁 예정 종료일"
+                        autocomplete="off"
+                        inputmode="numeric"
+                        data-default-today
+                      />
+                      <button type="button" class="range_button" data-range>
+                        1일
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        1주
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        1개월
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        3개월
+                      </button>
+                      <button type="button" class="range_button" data-range>
+                        6개월
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="filter_actions">
+              <button type="button" class="button small">
+                초기화
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.4192 10C12.7406 12.1293 10.7969 13.6667 8.50505 13.6667C5.64879 13.6667 3.33333 11.2789 3.33333 8.33333C3.33333 5.38781 5.64879 3 8.50505 3C10.4193 3 12.0907 4.07253 12.9849 5.66667M11.4141 6.33333H14V3.66667"
+                    stroke="#949BAC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button type="submit" class="button small primary">
+                조회
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.283 11.3584L13.5984 13.5984M12.8518 7.6251C12.8518 10.5117 10.5117 12.8518 7.6251 12.8518C4.7385 12.8518 2.39844 10.5117 2.39844 7.6251C2.39844 4.7385 4.7385 2.39844 7.6251 2.39844C10.5117 2.39844 12.8518 4.7385 12.8518 7.6251Z"
+                    stroke="white"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+          <p class="data_total">
+            총
+            <strong>37</strong>
+            건
+          </p>
+          <div class="data_table_wrap">
+            <table class="data_table affiliated_table">
+              <colgroup>
+                <col style="width: 11%" />
+                <col style="width: 11%" />
+                <col style="width: 11%" />
+                <col style="width: 21%" />
+                <col style="width: 11%" />
+                <col style="width: 12%" />
+                <col style="width: 12%" />
+                <col style="width: 11%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>금융회사</th>
+                  <th>금융사담당자</th>
+                  <th>모집인 등록번호</th>
+                  <th>모집인</th>
+                  <th>계약(예정)일자</th>
+                  <th>위탁(예정)일자</th>
+                  <th>등록일자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>대출</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>리스</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>대출</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>TM 리스</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>대출</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>리스</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>대출</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>리스</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>TM 리스</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+                <tr>
+                  <td>대출</td>
+                  <td>여신캐피탈</td>
+                  <td>김*신</td>
+                  <td>10-111011111</td>
+                  <td>유**</td>
+                  <td>2026.01.01</td>
+                  <td>2027.12.12</td>
+                  <td>2026.02.01</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="paging" aria-label="페이지">
+            <a
+              href="javascript:;"
+              aria-label="첫 페이지"
+              aria-disabled="true"
+              class="paging_btn first disabled"
+              >첫 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="이전 페이지"
+              aria-disabled="true"
+              class="paging_btn prev disabled"
+              >이전 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="첫 페이지"
+              class="paging_btn first"
+              >첫 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="이전 페이지"
+              class="paging_btn prev"
+              >이전 페이지</a
+            >
+            <a
+              class="paging_number active"
+              href="javascript:;"
+              aria-current="page"
+              >1</a
+            >
+            <a class="paging_number" href="javascript:;">2</a>
+            <a class="paging_number" href="javascript:;">3</a>
+            <a class="paging_number" href="javascript:;">4</a>
+            <a
+              href="javascript:;"
+              aria-label="다음 페이지"
+              class="paging_btn next"
+              >다음 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="마지막 페이지"
+              class="paging_btn last"
+              >마지막 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="다음 페이지"
+              aria-disabled="true"
+              class="paging_btn next disabled"
+              >다음 페이지</a
+            >
+            <a
+              href="javascript:;"
+              aria-label="마지막 페이지"
+              aria-disabled="true"
+              class="paging_btn last disabled"
+              >마지막 페이지</a
+            >
+          </nav>
+        </div>
+      </main>
+      <div class="partner_bar">
+        <div class="partner_list">
+          <a class="partner_item" href="javascript:;">
+            <img
+              src="../assets/images/partner-federation.png"
+              alt="은행연합회"
+            />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img src="../assets/images/partner-bank.png" alt="저축은행중앙회" />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img
+              src="../assets/images/partner-savings.png"
+              alt="생명보험협회"
+            />
+          </a>
+          <a class="partner_item" href="javascript:;">
+            <img src="../assets/images/partner-life.png" alt="손해보험협회" />
+          </a>
+          <a class="partner_item" href="javascript:;"
+            ><img src="../assets/images/partner-capital.png" alt="신협"
+          /></a>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_inner">
+          <div class="footer_top">
+            <img
+              class="footer_logo"
+              src="../assets/images/footer-logo.png"
+              alt="여신금융협회"
+            />
+            <div class="footer_columns">
+              <div class="footer_company">
+                <p>
+                  <span>상호명</span>
+                  (사)한국여신전문금융업협회
+                </p>
+                <p>
+                  <span>대표자</span>
+                  정완규
+                  <i></i>
+                  <span>사업자등록번호</span>
+                  202-82-05723
+                </p>
+                <p>
+                  <span>대표전화</span>
+                  02-2011-0770
+                </p>
+              </div>
+              <div class="footer_address">
+                <p>
+                  서울특별시 중구 다동길 43 (다동70번지) 한외빌딩12~13층
+                  여신금융협회 (04521)
+                </p>
+                <p>
+                  COPYRIGHT © THE CREDIT FINANCE ASSOCIATION ALL RIGHTS
+                  RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_links">
+            <a href="javascript:;">
+              <img src="../assets/images/footer-book.svg" alt="" />
+              개인정보처리방침
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-mail.svg" alt="" />
+              이용약관
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-rules.svg" alt="" />
+              관련규정
+            </a>
+            <a href="javascript:;">
+              <img src="../assets/images/footer-chat.svg" alt="" />
+              FAQ
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

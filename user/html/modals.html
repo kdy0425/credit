@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>사용자 공통 모달 | 여신금융협회</title>
+    <meta name="viewport" content="width=1400" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/additional.css" />
+    <script defer src="../assets/js/common.js"></script>
+    <script defer src="../assets/js/additional.js"></script>
+  </head>
+  <body class="additional_page">
+    <main class="user_modal_showcase">
+      <div class="container">
+        <h1 class="user_modal_showcase_title">사용자 공통 모달</h1>
+        <div class="user_modal_trigger_grid">
+          <article class="user_modal_trigger_card">
+            <h2>알림</h2>
+            <button
+              class="button small"
+              type="button"
+              onclick="alertModal('danger', '수정하시겠습니까?', '취소', '확인')"
+            >
+              모달 열기
+            </button>
+          </article>
+          <article class="user_modal_trigger_card">
+            <h2>서류 보완 요청</h2>
+            <button
+              class="button small"
+              type="button"
+              data-modal-open="#modal-document-supplement"
+            >
+              모달 열기
+            </button>
+          </article>
+          <article class="user_modal_trigger_card">
+            <h2>법인 정보</h2>
+            <button
+              class="button small"
+              type="button"
+              data-modal-open="#modal-corporation"
+            >
+              모달 열기
+            </button>
+          </article>
+          <article class="user_modal_trigger_card">
+            <h2>심사 보완 요청</h2>
+            <button
+              class="button small"
+              type="button"
+              data-modal-open="#modal-review-supplement"
+            >
+              모달 열기
+            </button>
+          </article>
+          <article class="user_modal_trigger_card">
+            <h2>회원사 수정</h2>
+            <button
+              class="button small"
+              type="button"
+              data-modal-open="#modal-company-edit"
+            >
+              모달 열기
+            </button>
+          </article>
+          <article class="user_modal_trigger_card">
+            <h2>업로드</h2>
+            <button
+              class="button small"
+              type="button"
+              data-modal-open="#modal-upload"
+            >
+              모달 열기
+            </button>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal_backdrop" id="modal-document-supplement">
+      <section
+        class="user_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-document-supplement-title"
+      >
+        <button
+          class="modal_close"
+          type="button"
+          aria-label="닫기"
+          data-modal-close
+        >
+          닫기
+        </button>
+        <h2 class="user_modal_title" id="modal-document-supplement-title">
+          서류 보완 요청
+        </h2>
+        <table class="user_modal_table">
+          <colgroup>
+            <col style="width: 160px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">서류구분</span>
+              </th>
+              <td>교육수료증</td>
+            </tr>
+            <tr class="modal_row_tall">
+              <th scope="row">
+                <span class="modal_field_label">보완사유</span>
+              </th>
+              <td>
+                <div class="user_modal_stack">
+                  <select data-selectbox aria-label="보완사유 선택">
+                    <option>직접 입력</option>
+                    <option>잘못된 서류 첨부</option>
+                    <option>개인정보 노출</option>
+                  </select>
+                  <textarea
+                    class="text_input"
+                    placeholder="TEXT EDITOR"
+                    aria-label="보완사유 입력"
+                  ></textarea>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal_buttons">
+          <button class="button" type="button" data-modal-close>취소</button>
+          <button class="button primary" type="button" data-modal-close>
+            저장
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal_backdrop" id="modal-corporation">
+      <section
+        class="user_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-corporation-title"
+      >
+        <button
+          class="modal_close"
+          type="button"
+          aria-label="닫기"
+          data-modal-close
+        >
+          닫기
+        </button>
+        <h2 class="user_modal_title" id="modal-corporation-title">법인 정보</h2>
+        <table class="user_modal_table">
+          <colgroup>
+            <col style="width: 160px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label class="modal_field_label" for="corporation-name"
+                  >법인명</label
+                >
+              </th>
+              <td>
+                <input
+                  class="text_input"
+                  id="corporation-name"
+                  type="text"
+                  placeholder="법인명을 입력해 주세요."
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="modal_field_label" for="corporation-number"
+                  >법인번호</label
+                >
+              </th>
+              <td>
+                <input
+                  class="text_input"
+                  id="corporation-number"
+                  type="text"
+                  placeholder="법인번호(-포함) 14자리를 입력해 주세요."
+                  maxlength="14"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">금융감독원 승인여부</span>
+              </th>
+              <td>
+                <div class="user_modal_radio_group">
+                  <label class="control_label"
+                    ><input type="radio" name="corporation-approved" /> Y</label
+                  >
+                  <label class="control_label"
+                    ><input type="radio" name="corporation-approved" /> N</label
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr class="modal_row_checks">
+              <th scope="row">
+                <span class="modal_field_label">회원사 선택</span>
+              </th>
+              <td>
+                <div class="user_modal_check_list">
+                  <label class="control_label"
+                    ><input type="checkbox" /> AJ캐피탈파트너스</label
+                  >
+                  <label class="control_label"
+                    ><input type="checkbox" /> 신은캐피탈</label
+                  >
+                  <label class="control_label"
+                    ><input type="checkbox" /> 미래에셋캐피탈</label
+                  >
+                  <label class="control_label"
+                    ><input type="checkbox" /> 하나카드</label
+                  >
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal_buttons">
+          <button class="button" type="button" data-modal-close>취소</button>
+          <button class="button primary" type="button" data-modal-close>
+            저장
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal_backdrop" id="modal-review-supplement">
+      <section
+        class="user_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-review-supplement-title"
+      >
+        <button
+          class="modal_close"
+          type="button"
+          aria-label="닫기"
+          data-modal-close
+        >
+          닫기
+        </button>
+        <h2 class="user_modal_title" id="modal-review-supplement-title">
+          심사 보완 요청
+        </h2>
+        <p class="user_modal_lead">
+          아래의 정보로 보완요청을 진행 하시겠습니까?
+        </p>
+        <table class="user_modal_table">
+          <colgroup>
+            <col style="width: 160px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">심사구분</span>
+              </th>
+              <td>최초등록심사</td>
+            </tr>
+            <tr class="modal_row_list">
+              <th scope="row">
+                <span class="modal_field_label">보완요청서류</span>
+              </th>
+              <td>
+                <ul class="user_modal_bullet_list">
+                  <li>교육수료증 - 잘못된 서류 첨부</li>
+                  <li>경력증명서 - 기타 : 개인정보 노출</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">보완요청사유</span>
+              </th>
+              <td><span class="required">일부 잘못된 서류 첨부</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal_buttons">
+          <button class="button" type="button" data-modal-close>취소</button>
+          <button class="button primary" type="button" data-modal-close>
+            저장
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal_backdrop" id="modal-company-edit">
+      <section
+        class="user_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-company-edit-title"
+      >
+        <button
+          class="modal_close"
+          type="button"
+          aria-label="닫기"
+          data-modal-close
+        >
+          닫기
+        </button>
+        <h2 class="user_modal_title" id="modal-company-edit-title">
+          회원사 수정
+        </h2>
+        <table class="user_modal_table">
+          <colgroup>
+            <col style="width: 160px" />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">회원사코드</span>
+              </th>
+              <td>3000011</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="modal_field_label" for="company-name"
+                  >회원사명</label
+                >
+              </th>
+              <td>
+                <input
+                  class="text_input"
+                  id="company-name"
+                  type="text"
+                  value=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">모집활동여부</span>
+              </th>
+              <td>
+                <div class="user_modal_radio_group">
+                  <label class="control_label"
+                    ><input type="radio" name="recruiting-active" /> Y</label
+                  >
+                  <label class="control_label"
+                    ><input type="radio" name="recruiting-active" /> N</label
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span class="modal_field_label">첨부파일</span>
+              </th>
+              <td>
+                <div class="user_modal_file_row" data-file-upload>
+                  <input
+                    class="text_input"
+                    type="text"
+                    placeholder="선택된 파일 없음"
+                    readonly
+                    data-file-name
+                    data-empty-text="선택된 파일 없음"
+                    aria-label="선택된 첨부파일"
+                  />
+                  <input class="sound_only" type="file" data-file-input />
+                  <button
+                    class="button small approval_edit_button"
+                    type="button"
+                    data-file-select
+                  >
+                    파일 선택
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="modal_buttons">
+          <button class="button" type="button" data-modal-close>취소</button>
+          <button class="button primary" type="button" data-modal-close>
+            저장
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal_backdrop" id="modal-upload">
+      <section
+        class="user_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-upload-title"
+      >
+        <button
+          class="modal_close"
+          type="button"
+          aria-label="닫기"
+          data-modal-close
+        >
+          닫기
+        </button>
+        <h2 class="user_modal_title" id="modal-upload-title">업로드</h2>
+        <div class="user_upload_panel" data-file-upload>
+          <div class="user_upload_file">
+            <div class="file_info">
+              <span
+                class="file_name"
+                data-file-name
+                data-empty-text="첨부된 파일이 없습니다."
+                >첨부된 파일이 없습니다.</span
+              >
+            </div>
+            <input class="sound_only" type="file" data-file-input />
+            <button
+              class="button small approval_edit_button"
+              type="button"
+              data-file-select
+            >
+              파일 선택
+            </button>
+          </div>
+        </div>
+        <div class="modal_buttons">
+          <button class="button" type="button" data-modal-close>취소</button>
+          <button class="button primary" type="button" data-modal-close>
+            저장
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

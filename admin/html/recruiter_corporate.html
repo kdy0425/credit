@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/flatpickr/4.6.13/flatpickr.css"
+    />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/vendor/flatpickr/4.6.13/flatpickr.js"></script>
+    <script defer src="../assets/vendor/flatpickr/4.6.13/ko.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout">
+      <header class="admin_header">
+        <a class="admin_brand" href="javascript:;">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">관리자 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">모집인 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">모집인조회</a>
+                <a class="active" href="javascript:;" aria-current="page"
+                  >모집인 심사</a
+                >
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a href="javascript:;">법인회원</a>
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <a class="admin_nav_link" href="javascript:;">통계</a>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">모집실적 조회 및 등록</a>
+                <a href="javascript:;">모집실적 통계</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">API관리</a>
+                <a href="javascript:;">알림발송</a>
+                <a href="javascript:;">공지사항관리</a>
+                <a href="javascript:;">팝업관리</a>
+                <a href="javascript:;">컨텐츠관리(FAQ, 관련 규정 등)</a>
+                <a href="javascript:;">약관 관리</a>
+                <a href="javascript:;">서비스 설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">정보 이용 신청</a>
+                <a href="javascript:;">정보 파기 이력</a>
+                <a href="javascript:;">개인정보 접근이력</a>
+                <a href="javascript:;">보안설정</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">공통코드관리</a>
+                <a href="javascript:;">권한/메뉴관리 등 eGOV 관리메뉴</a>
+              </div>
+            </div>
+          </nav>
+        </aside>
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">모집인 심사 상세</h1>
+            <div class="admin_breadcrumb">
+              <span>모집인 관리</span><span>모집인 심사</span>
+            </div>
+          </div>
+          <div class="review_detail review_tab_only">
+            <div class="review_detail_main">
+              <section
+                class="review_tabs_section"
+                aria-label="법인 모집인 상세정보"
+              >
+                <div
+                  class="segment_tabs"
+                  role="tablist"
+                  aria-label="상세정보 구분"
+                >
+                  <button
+                    class="active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    등록정보
+                  </button>
+                  <button type="button" role="tab" aria-selected="false">
+                    계약
+                  </button>
+                  <button type="button" role="tab" aria-selected="false">
+                    대표자/임원
+                  </button>
+                  <button type="button" role="tab" aria-selected="false">
+                    업무수행인력
+                  </button>
+                  <button type="button" role="tab" aria-selected="false">
+                    전산설비관리인력
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    onclick="location.href='recruiter_shareholder.html'"
+                  >
+                    주주명부
+                  </button>
+                </div>
+                <div class="tab_panel active" role="tabpanel">
+                  <table
+                    class="compact_info corporate_registration_info"
+                    aria-label="법인 등록정보"
+                  >
+                    <colgroup>
+                      <col style="width: 200px" />
+                      <col />
+                      <col style="width: 200px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">법인명</th>
+                        <td>(주)법인</td>
+                        <th scope="row">법인등록번호</th>
+                        <td>102312-3125452</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">법인대표명</th>
+                        <td>김대표</td>
+                        <th scope="row">법인대표 휴대전화번호</th>
+                        <td>010-1234-4321</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">CI</th>
+                        <td>HeqER3WQ</td>
+                        <th scope="row">사업자등록번호</th>
+                        <td>123453654</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text"
+                              >본점소재지</span
+                            ></span
+                          >
+                        </th>
+                        <td colspan="3">서울특별시 중구 다동길 32(다동)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">고정사업장</th>
+                        <td>서울특별시 중구 다동길 32(다동) 21312</td>
+                        <th scope="row">본점, 고정사업장 동일 여부</th>
+                        <td>Y</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">금융상품유형</th>
+                        <td colspan="3">
+                          <label class="check"
+                            ><input type="checkbox" checked />대출</label
+                          >　<label class="check"
+                            ><input type="checkbox" checked />TM대출</label
+                          >　<label class="check"
+                            ><input type="checkbox" />리스할부</label
+                          >　<label class="check"
+                            ><input type="checkbox" />TM리스</label
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text"
+                              >설립년월일<br />(법인등기부등본상)</span
+                            ></span
+                          >
+                        </th>
+                        <td>2022-10-10</td>
+                        <th scope="row">
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text">업종</span></span
+                          >
+                        </th>
+                        <td>업종1</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">영위하는 다른 업종</th>
+                        <td>업종2</td>
+                        <th scope="row">
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text"
+                              >자본금(백만원)</span
+                            ></span
+                          >
+                        </th>
+                        <td>111</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="danger_dot"
+                            ><span class="danger_dot_text"
+                              >의결권 있는 발행주식총수</span
+                            ></span
+                          >
+                        </th>
+                        <td>111</td>
+                        <th scope="row">신규/경력</th>
+                        <td>신규</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">API신규경력구분결과</th>
+                        <td>신규</td>
+                        <th scope="row">범죄이력</th>
+                        <td>N</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">사회적신용</th>
+                        <td>N</td>
+                        <th scope="row">사회적신용 관련</th>
+                        <td>N</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">말소이력</th>
+                        <td>N</td>
+                        <th aria-hidden="true"></th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <section
+                    class="attachment_section"
+                    aria-labelledby="corporate-attachments-title"
+                  >
+                    <h2
+                      class="subsection_title"
+                      id="corporate-attachments-title"
+                    >
+                      첨부서류
+                    </h2>
+                    <div class="data_table_wrapper">
+                      <table
+                        class="data_table attachment_table corporate_attachment_table layout_fixed"
+                      >
+                        <colgroup>
+                          <col style="width: 25.95%" />
+                          <col style="width: 22.24%" />
+                          <col style="width: 30.49%" />
+                          <col style="width: 140px" />
+                          <col style="width: 90px" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <th>첨부파일</th>
+                            <th>체크 항목</th>
+                            <th>상태</th>
+                            <th><span class="sound_only">처리</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <span class="danger_dot"
+                                ><span class="danger_dot_text"
+                                  >이사회 또는 주주총회 의사록(공증필요)</span
+                                ></span
+                              >
+                            </td>
+                            <td>
+                              <a class="link" href="javascript:;">의사록.PDF</a>
+                            </td>
+                            <td>
+                              <div class="attachment_checks">
+                                <label class="check"
+                                  ><input type="checkbox" checked />공증
+                                  유무</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />등록의사
+                                  포함 여부</label
+                                >
+                              </div>
+                            </td>
+                            <td class="attachment_status">
+                              보완요청<br />(잘못된 서류 첨부)
+                            </td>
+                            <td>
+                              <button class="button tiny outline" type="button">
+                                취소
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="danger_dot"
+                                ><span class="danger_dot_text"
+                                  >사업자등록증명</span
+                                ></span
+                              >
+                            </td>
+                            <td>
+                              <a class="link" href="javascript:;">의사록.PDF</a>
+                            </td>
+                            <td>
+                              <div class="attachment_checks">
+                                <label class="check"
+                                  ><input type="checkbox" checked />확인</label
+                                >
+                              </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="danger_dot"
+                                ><span class="danger_dot_text"
+                                  >주주명부(법인인감날인필수)</span
+                                ></span
+                              >
+                            </td>
+                            <td>
+                              <a class="link" href="javascript:;"
+                                >주주명부법인인감날인필수서류첨부파일.PDF</a
+                              >
+                            </td>
+                            <td>
+                              <div class="attachment_checks">
+                                <label class="check"
+                                  ><input
+                                    type="checkbox"
+                                    checked
+                                  />법인인감날인여부</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />주민등록번호
+                                  마스킹 여부</label
+                                >
+                              </div>
+                            </td>
+                            <td>제출</td>
+                            <td>
+                              <button class="button tiny outline" type="button">
+                                보완
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="danger_dot"
+                                ><span class="danger_dot_text"
+                                  >영위하는 다른 업종에 대한 증빙서류(허가증,
+                                  등록증 등)</span
+                                ></span
+                              >
+                            </td>
+                            <td>
+                              <a class="link" href="javascript:;">허가증.PDF</a>
+                            </td>
+                            <td>
+                              <div class="attachment_checks">
+                                <label class="check"
+                                  ><input type="checkbox" checked />정관상
+                                  영위하는 업무 관련 증명서 제출 여부</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />허가증,
+                                  등록증</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />정관상
+                                  영위하는 업무 관련 증명서 제출 여부이 2줄이
+                                  되면 어떡하지</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />TM법인 :
+                                  전화권유판매업등록증</label
+                                ><label class="check"
+                                  ><input type="checkbox" checked />허가증,
+                                  등록증</label
+                                >
+                              </div>
+                            </td>
+                            <td>제출</td>
+                            <td>
+                              <button class="button tiny outline" type="button">
+                                보완
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </section>
+            </div>
+            <aside class="review_rail">
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>담당자</th>
+                      <td>이실무</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>상태</th>
+                      <td>상신</td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>
+                        해지 요청으로 부적격 처리 필요가 두줄이되면 어떡하지
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>김중간</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>심사</th>
+                      <td>상신</td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>부적격 필요</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article class="review_card review_action_card active_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>박최고</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th><label for="review-memo-corporate">메모</label></th>
+                      <td>
+                        <textarea
+                          class="review_memo"
+                          id="review-memo-corporate"
+                          placeholder="부적격 전결 처리함"
+                        ></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="review_actions">
+                  <button class="button tiny outline" type="button">
+                    보완요청</button
+                  ><button class="button tiny light" type="button">
+                    협회반려</button
+                  ><button class="button tiny blue-outline" type="button">
+                    승인</button
+                  ><button class="button tiny danger-outline" type="button">
+                    부적격
+                  </button>
+                </div>
+              </article>
+              <article class="review_card">
+                <table class="review_card_table">
+                  <tbody>
+                    <tr>
+                      <th>관리자</th>
+                      <td>김중간</td>
+                    </tr>
+                    <tr>
+                      <th>심사일시</th>
+                      <td>2026.07.12</td>
+                    </tr>
+                    <tr>
+                      <th>심사</th>
+                      <td>
+                        <span class="tag">승인</span>
+                        <span class="tag dark">보완요청</span>
+                        <span class="tag gray">협회반려</span>
+                        <span class="tag red">부적격</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>내용</th>
+                      <td>부적격 전결 처리</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
