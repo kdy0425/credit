@@ -17,6 +17,43 @@
     min-height: 348px;
 }
 
+.member_type_tabs {
+    display: flex;
+    width: max-content;
+    margin: 0 30px 24px;
+    padding: 2px;
+    border-radius: 16px;
+    background: #ebeff5;
+    gap: 4px;
+}
+
+.member_type_tabs a {
+    display: flex;
+    min-width: 120px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 12px;
+    color: #596277;
+    font-size: 16px;
+    line-height: 1.3;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.member_type_tabs a.active {
+    background: #364258;
+    color: #fff;
+    font-weight: 700;
+}
+.member_type_tabs a.active:hover {
+    background: #2b364b;
+}
+.member_type_tabs a:not(.active):hover,
+.member_type_tabs a:not(.active):focus-visible {
+    background: #dfe5ee;
+}
+
 .review_search_card {
     display: flex;
     height: 432px;
@@ -473,7 +510,7 @@ span.flatpickr-weekday {
 }
 
 .button.outline {
-    border-color: #DDE1ED;
+    border-color: #949BAC;
     background: #fff;
     color: #151515;
 }
@@ -491,9 +528,10 @@ span.flatpickr-weekday {
 }
 
 .button.light {
-    border-color: #f2f6ff;
-    background: #f2f6ff;
-    color: #596277;
+    border-color: #EBEEF6;
+    background: #EBEEF6;
+    color: #364258;
+    font-weight: 700;
 }
 
 .button.small {
@@ -530,7 +568,7 @@ span.flatpickr-weekday {
 .button.tiny.light {
     border-color: #ebeef6;
     background: #ebeef6;
-    color: #949BAC;
+    color: #4C5469;
 }
 
 .button.dark:hover,
@@ -561,7 +599,7 @@ span.flatpickr-weekday {
 .button.light:hover,
 .button.light:focus-visible {
     background: #e4eaf5;
-    color: #828a9e;
+    color: #474f64;
 }
 
 .list_toolbar {
@@ -591,6 +629,64 @@ span.flatpickr-weekday {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.4;
+}
+
+.member_list_toolbar {
+    gap: 24px;
+}
+
+.bulk_toolbar,
+.toolbar_button_group {
+    display: flex;
+    align-items: center;
+}
+
+.bulk_toolbar {
+    min-width: 0;
+    gap: 20px;
+}
+
+.toolbar_button_group {
+    gap: 10px;
+}
+
+.toolbar_divider {
+    width: 1px;
+    height: 8px;
+    background: #949BAC;
+}
+
+.bulk_toolbar_label {
+    color: #151515;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.button.icon_button {
+    gap: 6px;
+}
+
+.button.icon_button img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: none;
+}
+
+.button.small.upload_button {
+    border-color: #4c5469;
+    color: #4c5469;
+}
+
+.button.small.upload_button:hover,
+.button.small.upload_button:focus-visible {
+    background: #f6f8fb;
+    color: #364258;
+}
+
+.member_list_toolbar > .toolbar_button_group .button.outline,
+.detail_file_group .button.tiny.outline {
+    border-color: #dde1ed;
 }
 
 .toolbar_options {
@@ -1041,6 +1137,125 @@ small{
     border-radius: 8px;
     color: #4f4f4f;
     resize: none;
+}
+
+.detail_input,
+.detail_select {
+    display: block;
+    width: 300px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #dde1ed;
+    border-radius: 8px;
+    outline: 0;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-family: 'Pretendard GOV', sans-serif;
+    font-size: 14px;
+}
+
+.detail_input:focus,
+.detail_select:focus {
+    border-color: #588fed;
+}
+
+.detail_file_group {
+    width: 388px;
+}
+
+.detail_file_group .file_input {
+    flex: 0 0 300px;
+}
+
+.detail_email_group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail_email_group .detail_input,
+.detail_email_group .detail_select {
+    width: auto;
+    min-width: 0;
+    flex: 1;
+}
+
+.detail_file_link {
+    display: inline-flex;
+    align-items: center;
+    color: #588fed;
+    font-size: 14px;
+    text-decoration: underline;
+    gap: 8px;
+}
+.detail_file_link:hover,
+.detail_file_link:focus-visible {
+    color: #376ecc;
+}
+
+.detail_file_link img {
+    width: 20px;
+    height: 20px;
+    flex: none;
+}
+
+.password_detail_content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.admin_password_input {
+    position: relative;
+    width: 300px;
+    flex: none;
+}
+
+.admin_password_input .detail_input {
+    width: 100%;
+    padding-right: 44px;
+}
+
+.admin_password_toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 44px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.admin_password_toggle img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.admin_password_toggle:hover img,
+.admin_password_toggle:focus-visible img {
+    filter: brightness(.82);
+}
+
+.admin_password_toggle:focus-visible {
+    outline: 2px solid rgba(88, 143, 237, .35);
+    outline-offset: -3px;
+    border-radius: 6px;
+}
+
+.password_guide {
+    display: flex;
+    flex-direction: column;
+    color: #4f4f4f;
+    font-size: 14px;
+    line-height: 1.3;
+    gap: 5px;
 }
 .detail_actions {
     display: flex;

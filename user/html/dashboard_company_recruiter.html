@@ -29,8 +29,12 @@
           <div class="header_auth">
             <div class="header_session">
               <span>일반회원(User)</span>
-              <strong class="header_session_time" data-session-timer>29:18</strong>
-              <button class="header_extend" type="button" data-session-extend>시간연장</button>
+              <strong class="header_session_time" data-session-timer
+                >29:18</strong
+              >
+              <button class="header_extend" type="button" data-session-extend>
+                시간연장
+              </button>
             </div>
             <a class="header_login is_logout" href="login.html">로그아웃</a>
           </div>
@@ -40,8 +44,8 @@
       <main class="site_main dashboard_content">
         <div class="container dashboard_inner">
           <div class="dashboard_top">
-            <section class="profile_card is_company">
-              <div class="profile_body">
+            <section class="profile_card is_company is_pending">
+              <div class="pending_profile">
                 <div class="profile_head">
                   <span class="user_icon"
                     ><img src="../assets/images/icon-user.svg" alt=""
@@ -61,7 +65,26 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="pending_profile_body">
+                  <img
+                    class="pending_profile_art"
+                    src="../assets/images/dashboard-status-recruiter.png"
+                    alt=""
+                  />
+                  <div class="pending_state_box">
+                    <span class="pending_badge">미등록</span>
+                    <strong>모집인 등록을 요청해주세요!</strong>
+                    <a
+                      class="pending_request_button"
+                      href="recruiter_registration.html"
+                    >
+                      모집인 등록 요청
+                      <img src="../assets/images/icon-file-plus.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="profile_body">
                 <div class="profile_details">
                   <div class="company_register_group">
                     <button class="company_search" type="button">
@@ -525,8 +548,12 @@
 
           slider.addEventListener("pointerup", finishDrag);
           slider.addEventListener("pointercancel", finishDrag);
-          slider.addEventListener("dragstart", (event) => event.preventDefault());
-          slider.addEventListener("mouseenter", () => window.clearInterval(timer));
+          slider.addEventListener("dragstart", (event) =>
+            event.preventDefault(),
+          );
+          slider.addEventListener("mouseenter", () =>
+            window.clearInterval(timer),
+          );
           slider.addEventListener("mouseleave", () => {
             if (!isDragging) restart();
           });

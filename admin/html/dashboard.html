@@ -118,6 +118,10 @@
           </div>
 
           <div class="admin_content">
+            <nav class="member_type_tabs" aria-label="법인회원 유형">
+              <a class="active" href="javascript:;" aria-current="page">개인/임원</a>
+              <a href="javascript:;">법인</a>
+            </nav>
             <form
               class="search_card member_search_card"
               onsubmit="return false;"
@@ -199,15 +203,39 @@
               </div>
             </form>
 
-            <div class="list_toolbar">
-              <p class="list_count">총 <strong>3</strong> 건</p>
-              <button
-                class="button small outline lock_button"
-                type="button"
-                onclick="alertModal('danger', '로그인 잠금을 해제하시겠습니까?', '취소', '확인')"
-              >
-                로그인 잠금해제
-              </button>
+            <div class="list_toolbar member_list_toolbar">
+              <div class="bulk_toolbar">
+                <p class="list_count">총 <strong>3</strong> 건</p>
+                <span class="toolbar_divider" aria-hidden="true"></span>
+                <span class="bulk_toolbar_label">일괄등록</span>
+                <div class="toolbar_button_group">
+                  <button class="button small blue-outline icon_button" type="button">
+                    업로드 양식 다운로드
+                    <img src="../assets/images/icons/download-blue.svg" alt="" />
+                  </button>
+                  <button class="button small outline upload_button icon_button" type="button">
+                    결격요건 업로드
+                    <img src="../assets/images/icons/upload.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+              <div class="toolbar_button_group">
+                <button class="button small outline icon_button" type="button">
+                  엑셀 다운로드
+                  <img src="../assets/images/icons/file-download.svg" alt="" />
+                </button>
+                <button class="button small outline icon_button" type="button">
+                  결격요건 초기화
+                  <img src="../assets/images/icons/disqualification-reset.svg" alt="" />
+                </button>
+                <button
+                  class="button small outline lock_button"
+                  type="button"
+                  onclick="alertModal('danger', '로그인 잠금을 해제하시겠습니까?', '취소', '확인')"
+                >
+                  로그인 잠금해제
+                </button>
+              </div>
             </div>
 
             <section class="table_surface" aria-label="법인회원 목록">

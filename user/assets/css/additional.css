@@ -597,6 +597,12 @@
     z-index: 1;
     width: 220px;
 }
+.selectbox:has(> select.w_form) {
+    width: 380px;
+}
+.selectbox:has(> select.w_sm) {
+    width: 220px;
+}
 .selectbox.open {
     z-index: 60;
 }
@@ -2198,6 +2204,95 @@ span.flatpickr-weekday {
     height: 3px;
     border-radius: 50%;
     background: var(--blue-gray-500);
+}
+
+/* 2026-08 Figma additions: recruiter member management */
+.recruiter_member_page .compact_title {
+    margin-bottom: 60px;
+}
+
+.recruiter_member_table .form_cell,
+.password_display_table .form_cell {
+    color: var(--gray-900);
+}
+
+.recruiter_member_table .input_group {
+    flex-wrap: nowrap;
+}
+
+.email_input_group > span {
+    color: var(--blue-gray-700);
+}
+
+.file_button {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.button_cluster {
+    display: flex;
+    gap: 12px;
+}
+
+.detail_table .form_cell > span,
+.detail_table .input_group > span {
+    color: var(--gray-700);
+}
+
+.password_display_table .form_cell {
+    padding-right: 16px;
+}
+
+.password_rule_list {
+    display: flex;
+    margin-top: 8px;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--blue-gray-700);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.password_input {
+    position: relative;
+    width: 380px;
+}
+
+.password_input .text_input {
+    width: 100%;
+    padding-right: 44px;
+}
+
+.password_toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 44px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.password_toggle:focus-visible {
+    outline: 2px solid rgba(88, 143, 237, .35);
+    outline-offset: -3px;
+    border-radius: 4px;
+}
+
+.password_toggle img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.password_toggle:hover img,
+.password_toggle:focus-visible img {
+    filter: brightness(.82);
 }
 .account_cta {
     font-weight: 500;

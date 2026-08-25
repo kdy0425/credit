@@ -25,4 +25,49 @@
     document.querySelectorAll('form').forEach((form) => {
         form.addEventListener('submit', (event) => event.preventDefault());
     });
+
+    document.querySelectorAll('[data-session-timer]').forEach((timer) => {
+        const session = timer.closest('.header_session');
+        const extendButton = session?.querySelector('[data-session-extend]');
+        let remainingSeconds = Number(timer.dataset.sessionTimer || 1758);
+
+        const renderTimer = () => {
+            const minutes = Math.floor(remainingSeconds / 60);
+            const seconds = remainingSeconds % 60;
+            timer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        };
+
+        extendButton?.addEventListener('click', () => {
+            remainingSeconds = 1758;
+            renderTimer();
+            extendButton.classList.add('is_extended');
+            window.setTimeout(() => extendButton.classList.remove('is_extended'), 600);
+        });
+
+        renderTimer();
+        window.setInterval(() => {
+            remainingSeconds = Math.max(0, remainingSeconds - 1);
+            renderTimer();
+        }, 1000);
+    });
+
+    document.querySelectorAll('[data-password-toggle]').forEach((button) => {
+        const input = document.getElementById(button.dataset.passwordToggle);
+        const eyeOpen = button.querySelector('[data-eye-open]');
+        const eyeClosed = button.querySelector('[data-eye-closed]');
+        if (!input || !eyeOpen || !eyeClosed) return;
+
+        const updatePasswordState = (isVisible) => {
+            input.type = isVisible ? 'text' : 'password';
+            eyeOpen.style.display = isVisible ? 'none' : '';
+            eyeClosed.style.display = isVisible ? '' : 'none';
+            button.setAttribute('aria-pressed', String(isVisible));
+            button.setAttribute('aria-label', isVisible ? '비밀번호 숨기기' : '비밀번호 표시');
+        };
+
+        updatePasswordState(input.type === 'text');
+        button.addEventListener('click', () => {
+            updatePasswordState(input.type === 'password');
+        });
+    });
 })();

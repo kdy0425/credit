@@ -5,7 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
     initReviewTableSortButtons();
     initAdminModals();
     initAdminFileInputs();
+    initAdminPasswordToggles();
 });
+
+function initAdminPasswordToggles() {
+    document.querySelectorAll('[data-admin-password-toggle]').forEach((button) => {
+        const input = document.getElementById(button.dataset.adminPasswordToggle);
+        const eyeOpen = button.querySelector('[data-eye-open]');
+        const eyeClosed = button.querySelector('[data-eye-closed]');
+        if (!input || !eyeOpen || !eyeClosed) return;
+
+        const updatePasswordState = (isVisible) => {
+            input.type = isVisible ? 'text' : 'password';
+            eyeOpen.style.display = isVisible ? 'none' : '';
+            eyeClosed.style.display = isVisible ? '' : 'none';
+            button.setAttribute('aria-pressed', String(isVisible));
+            button.setAttribute('aria-label', isVisible ? '비밀번호 숨기기' : '비밀번호 표시');
+        };
+
+        updatePasswordState(input.type === 'text');
+        button.addEventListener('click', () => updatePasswordState(input.type === 'password'));
+    });
+}
 
 function initReviewTableSortButtons() {
     const nextState = { none: 'asc', asc: 'desc', desc: 'none' };
