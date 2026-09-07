@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>법인 회원 가입 | 여신금융협회</title>
+    <title>개인 회원 가입 | 여신금융협회</title>
     <meta name="viewport" content="width=1400" />
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/layout.css" />
@@ -16,7 +16,9 @@
     <div id="layout">
       <header id="header">
         <div class="container header_inner">
-          <a class="header_logo" href="index.html"><img src="../assets/images/logo.png" alt="여신금융협회" /></a>
+          <a class="header_logo" href="index.html">
+            <img src="../assets/images/logo.png" alt="여신금융협회" />
+          </a>
           <nav class="header_nav" aria-label="주요 메뉴">
             <a href="javascript:;">대출모집인 제도</a>
             <a href="javascript:;">대출모집인조회</a>
@@ -35,10 +37,10 @@
         </div>
       </header>
 
-      <main class="site_main sub_content additional_page signup_form_page company_member_page">
+      <main class="site_main sub_content additional_page signup_form_page personal_member_page">
         <div class="container">
-          <div class="breadcrumb"><span>법인 회원 가입</span></div>
-          <h1 class="compact_title">법인 회원 가입</h1>
+          <div class="breadcrumb"><span>개인 회원가입</span></div>
+          <h1 class="compact_title">개인 회원 가입</h1>
           <div class="stepper" aria-label="회원가입 단계">
             <div class="step"><b>1</b><span>약관동의</span></div>
             <div class="step active"><b>2</b><span>정보입력</span></div>
@@ -46,7 +48,7 @@
           </div>
 
           <section class="signup_section">
-            <h2 class="section_title">법인 정보</h2>
+            <h2 class="section_title">기본 정보</h2>
             <div class="form_table_wrap">
               <table class="form_table">
                 <colgroup><col style="width: 220px" /><col /></colgroup>
@@ -70,59 +72,10 @@
                   </tr>
                   <tr>
                     <th class="form_label" scope="row">비밀번호 확인 <span class="required">*</span></th>
-                    <td class="form_cell"><input class="text_input w_form" type="password" placeholder="비밀번호를 재입력 해주세요." /></td>
-                  </tr>
-                  <tr>
-                    <th class="form_label" scope="row">법인명 <span class="required">*</span></th>
-                    <td class="form_cell"><input class="text_input w_form" type="text" placeholder="법인명을 입력해주세요." /></td>
-                  </tr>
-                  <tr>
-                    <th class="form_label" scope="row">법인등록번호 <span class="required">*</span></th>
-                    <td class="form_cell"><input class="text_input w_form" type="text" placeholder="법인등록번호를 입력해주세요. ( - 제외)" /></td>
-                  </tr>
-                  <tr>
-                    <th class="form_label" scope="row">사업자등록번호 <span class="required">*</span></th>
-                    <td class="form_cell"><input class="text_input w_form" type="text" placeholder="사업자등록번호를 입력해주세요. ( - 제외)" /></td>
-                  </tr>
-                  <tr>
-                    <th class="form_label" scope="row">
-                      첨부서류 <span class="required">*</span>
-                      <small class="file_label_note">말소사항이 포함된<br />등기부등본</small>
-                    </th>
-                    <td class="form_cell" data-file-upload>
-                      <div class="input_group">
-                        <input class="text_input w_form" type="text" readonly data-file-name data-empty-text="첨부된 파일이 없습니다." />
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" hidden data-file-input />
-                        <button type="button" class="button small" data-file-select>파일 선택</button>
-                        <span class="caption">※ 최대1개, 00MB까지 첨부가 가능합니다.</span>
-                      </div>
+                    <td class="form_cell">
+                      <input class="text_input w_form" type="password" placeholder="비밀번호를 재입력 해주세요." />
                     </td>
                   </tr>
-                  <tr>
-                    <th class="form_label" scope="row">
-                      첨부서류 <span class="required">*</span>
-                      <small class="file_label_note">사업자등록증</small>
-                    </th>
-                    <td class="form_cell" data-file-upload>
-                      <div class="input_group">
-                        <input class="text_input w_form" type="text" readonly data-file-name data-empty-text="첨부된 파일이 없습니다." />
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png" hidden data-file-input />
-                        <button type="button" class="button small" data-file-select>파일 선택</button>
-                        <span class="caption">※ 최대1개, 00MB까지 첨부가 가능합니다.</span>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section class="signup_section">
-            <h2 class="section_title">대표자 정보</h2>
-            <div class="form_table_wrap">
-              <table class="form_table">
-                <colgroup><col style="width: 220px" /><col /></colgroup>
-                <tbody>
                   <tr>
                     <th class="form_label" scope="row">성명 <span class="required">*</span></th>
                     <td class="form_cell"><span class="value">오태진</span></td>

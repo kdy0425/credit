@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>권한관리 | 여신금융협회</title>
+    <meta name="viewport" content="width=1920" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content.css" />
+    <script defer src="../assets/js/common.js"></script>
+  </head>
+  <body>
+    <div class="admin_layout permission_management_page">
+      <header class="admin_header">
+        <a class="admin_brand" href="dashboard.html">
+          <img src="../assets/images/logo.png" alt="여신금융협회" />
+          <span>대출상품 모집인 등록관리 시스템</span>
+        </a>
+        <div class="admin_user">
+          <a href="javascript:;" class="admin_user_link">
+            <span class="admin_user_icon" aria-hidden="true"></span>
+            <strong>시스템</strong><span>님</span>
+          </a>
+          <button class="admin_logout" type="button">로그아웃</button>
+        </div>
+      </header>
+
+      <div class="admin_body">
+        <aside class="admin_sidebar">
+          <nav class="admin_nav" aria-label="관리자 메뉴">
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">회원사 관리</p>
+              <div class="admin_nav_sub is-collapsed">
+                <a href="javascript:;">회원사 관리</a>
+                <a href="javascript:;">회원사 담당자 관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">관리자 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">협회 관리자 관리</a>
+                <a href="javascript:;">법인관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">모집인 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">모집인 조회</a>
+                <a href="javascript:;">모집인 심사</a>
+                <a href="javascript:;">결격요건관리</a>
+                <a href="javascript:;">교육이수번호 조회</a>
+              </div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title">회원 관리</p>
+              <div class="admin_nav_sub">
+                <a href="javascript:;">일반 심사</a>
+                <a href="javascript:;">개인회원</a>
+                <a class="active" href="javascript:;" aria-current="page">법인회원</a>
+                <a href="javascript:;">휴면회원관리</a>
+              </div>
+            </div>
+            <div class="admin_nav_group"><a class="admin_nav_link" href="javascript:;">통계</a></div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">모집실적</p>
+              <div class="admin_nav_sub is-collapsed"><a href="javascript:;">모집실적 조회 및 등록</a><a href="javascript:;">모집실적 통계</a></div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">서비스 관리</p>
+              <div class="admin_nav_sub is-collapsed"><a href="javascript:;">API관리</a><a href="javascript:;">공지사항관리</a></div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">보안</p>
+              <div class="admin_nav_sub is-collapsed"><a href="javascript:;">개인정보 접근이력</a><a href="javascript:;">보안설정</a></div>
+            </div>
+            <div class="admin_nav_group">
+              <p class="admin_nav_title is-collapsed">시스템 관리</p>
+              <div class="admin_nav_sub is-collapsed"><a href="javascript:;">공통코드관리</a><a href="permission_management.html">권한관리</a></div>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="admin_main">
+          <div class="admin_titlebar">
+            <h1 class="admin_page_title">권한관리</h1>
+            <div class="admin_breadcrumb" aria-label="현재 위치"><span>권한관리</span></div>
+          </div>
+
+          <div class="admin_content permission_surface">
+            <section class="permission_editor" aria-label="메뉴 권한 관리">
+              <nav class="permission_tree" aria-label="메뉴 구조">
+                <div class="tree_branch">
+                  <button class="tree_branch_button tree_depth_1 active" type="button" aria-expanded="true">대메뉴2</button>
+                  <div class="tree_children">
+                    <div class="tree_branch">
+                      <button class="tree_branch_button tree_depth_2" type="button" aria-expanded="true">중메뉴1</button>
+                      <div class="tree_leaf_group">
+                        <button class="tree_leaf active" type="button">메뉴관리</button>
+                        <button class="tree_leaf" type="button">소메뉴1</button>
+                        <button class="tree_leaf" type="button">소메뉴2</button>
+                      </div>
+                    </div>
+                    <button class="tree_branch_button tree_depth_2" type="button" aria-expanded="false">중메뉴2</button>
+                    <button class="tree_branch_button tree_depth_2" type="button" aria-expanded="false">중메뉴3</button>
+                    <button class="tree_branch_button tree_depth_2" type="button" aria-expanded="false">중메뉴4</button>
+                  </div>
+                </div>
+                <button class="tree_branch_button tree_depth_1" type="button" aria-expanded="false">대메뉴2</button>
+                <button class="tree_branch_button tree_depth_1" type="button" aria-expanded="false">대메뉴3</button>
+                <button class="tree_branch_button tree_depth_1" type="button" aria-expanded="false">대메뉴4</button>
+                <button class="tree_branch_button tree_depth_1" type="button" aria-expanded="false">대메뉴5</button>
+              </nav>
+
+              <div class="permission_divider" aria-hidden="true"></div>
+
+              <div class="permission_detail">
+                <h2 class="permission_detail_title">메뉴 관리</h2>
+                <table class="permission_form_rows">
+                  <tbody>
+                    <tr><th scope="row">메뉴ID</th><td>10</td></tr>
+                    <tr><th class="required" scope="row"><label for="menu-name">메뉴명</label></th><td><input class="detail_input" id="menu-name" type="text" /></td></tr>
+                    <tr><th scope="row"><label for="parent-menu">상위 메뉴</label></th><td><input class="detail_input" id="parent-menu" type="text" /></td></tr>
+                    <tr>
+                      <th class="required" scope="row">구분</th>
+                      <td>
+                        <div class="info_radios">
+                          <label class="radio"><input type="radio" name="menu-type" checked />폴더</label>
+                          <label class="radio"><input type="radio" name="menu-type" />화면</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><label for="menu-url">URL</label></th>
+                      <td><div class="inline_field"><input class="detail_input" id="menu-url" type="text" /><span class="helper_text">※ 비워두면 “준비 중” 메뉴로 표시됩니다.</span></div></td>
+                    </tr>
+                    <tr><th scope="row"><label for="view-path">뷰 경로</label></th><td><input class="detail_input" id="view-path" type="text" /></td></tr>
+                    <tr><th class="required" scope="row"><label for="sort-order">정렬 순서</label></th><td><input class="detail_input" id="sort-order" type="number" /></td></tr>
+                    <tr>
+                      <th scope="row">사용 여부</th>
+                      <td>
+                        <div class="info_radios">
+                          <label class="radio"><input type="radio" name="use-state" checked />폴더</label>
+                          <label class="radio"><input type="radio" name="use-state" />화면</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr><th scope="row">로그인 필요</th><td></td></tr>
+                    <tr><th scope="row">등록 정보</th><td>2026-09-04 17:00:00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <div class="permission_actions">
+              <button class="button light" type="button">취소</button>
+              <button class="button outline" type="button">삭제</button>
+              <button class="button dark" type="button">저장</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.permission_tree .tree_branch_button').forEach((button) => {
+        button.addEventListener('click', () => {
+          const branch = button.parentElement;
+          const children = branch?.querySelector(':scope > .tree_children, :scope > .tree_leaf_group');
+          if (!children) return;
+          const expanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!expanded));
+          branch.classList.toggle('is-collapsed', expanded);
+        });
+      });
+
+      document.querySelectorAll('.permission_tree .tree_leaf').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.permission_tree .tree_leaf').forEach((item) => item.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>

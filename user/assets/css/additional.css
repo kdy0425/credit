@@ -2322,6 +2322,318 @@ span.flatpickr-weekday {
     line-height: 1.4;
 }
 
+/* 2026-09-07 Figma renewal pages */
+.signup_form_page .section_title {
+    margin-top: 0;
+}
+
+.signup_form_page .signup_section + .signup_section {
+    margin-top: 40px;
+}
+
+.signup_form_page .form_table .password_row th,
+.signup_form_page .form_table .password_row td,
+.signup_form_page .form_table .email_row th,
+.signup_form_page .form_table .email_row td,
+.signup_form_page .form_table .notice_row th,
+.signup_form_page .form_table .notice_row td {
+    height: auto;
+    min-height: 72px;
+}
+
+.signup_form_page .form_table .password_row td,
+.signup_form_page .form_table .email_row td,
+.signup_form_page .form_table .notice_row td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.signup_form_page .field_stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.signup_form_page .field_row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signup_form_page .field_guide,
+.signup_form_page .validation_message {
+    color: var(--blue-gray-700);
+    font: 400 16px/1.4 'Pretendard GOV', sans-serif;
+}
+
+.signup_form_page .validation_message {
+    color: var(--danger);
+}
+
+.signup_form_page .file_label_note {
+    display: block;
+    margin-top: 6px;
+    color: var(--blue-gray-700);
+    font: 400 16px/1.4 'Pretendard GOV', sans-serif;
+}
+
+.signup_form_page [data-file-name] {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.signup_form_page .button_row {
+    margin-top: 60px;
+}
+
+.signup_form_page .notification_row {
+    min-height: 40px;
+}
+
+.signup_form_page .notification_channels {
+    min-width: 181px;
+}
+
+.terms_signup_content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.terms_agreements {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed var(--blue-gray-400);
+}
+
+.terms_agreement {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.terms_agreement .section_title,
+.member_type_panel .section_title {
+    margin: 0;
+}
+
+.member_type_panel .section_title::before {
+    display: none;
+}
+
+.agreement_box {
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid var(--blue-gray-300);
+    border-radius: 24px;
+    background: #fff;
+}
+
+.agreement_copy {
+    min-height: 0;
+    overflow-y: auto;
+    padding: 20px;
+    color: var(--gray-700);
+    font: 400 16px/1.4 'Pretendard GOV', sans-serif;
+    scrollbar-color: var(--blue-gray-500) var(--blue-gray-200);
+    scrollbar-width: thin;
+}
+
+.agreement_copy::-webkit-scrollbar {
+    width: 7px;
+}
+
+.agreement_copy::-webkit-scrollbar-track {
+    background: var(--blue-gray-200);
+}
+
+.agreement_copy::-webkit-scrollbar-thumb {
+    border: 2px solid var(--blue-gray-200);
+    border-radius: 4px;
+    background: var(--blue-gray-500);
+}
+
+.agreement_choice {
+    display: flex;
+    height: 70px;
+    flex: 0 0 70px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 0 40px;
+    background: var(--blue-gray-100);
+}
+
+.agreement_choice .control_label {
+    gap: 8px;
+    color: var(--blue-gray-700);
+    font-family: var(--font-display);
+    font-size: 16px;
+}
+
+.agreement_choice .control_label:has(input:checked) {
+    font-weight: 700;
+}
+
+.all_agree_line {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    gap: 10px;
+    padding: 0 32px;
+    border: 2px solid var(--blue-gray-300);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--blue-gray-700);
+    font: 700 18px/1.4 var(--font-display);
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.all_agree_line:hover{
+    border-color: var(--primary);
+}
+
+.all_agree_line:has(input:checked) {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: #fff;
+}
+
+.member_type_area {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.member_type_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    border-radius: 24px;
+    background: var(--bg-gray);
+}
+
+.member_type_options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.member_type_card {
+    position: relative;
+    display: flex;
+    min-height: 156px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 32px 40px;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    background: #fff;
+    color: var(--blue-gray-900);
+    font: 500 18px/1.4 var(--font-display);
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.member_type_card input {
+    position: absolute;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.member_type_card img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.member_type_card strong {
+    font-weight: inherit;
+}
+
+.member_type_card:hover,
+.member_type_card:focus-within {
+    background: #f8fbff;
+}
+
+.member_type_card:has(input:checked) {
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.member_type_area .terms_note {
+    margin-top: 0;
+}
+
+.terms_signup_actions {
+    display: flex;
+    height: 62px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.terms_signup_actions .button_group {
+    display: flex;
+    gap: 12px;
+}
+
+.error_page {
+    display: flex;
+    height: 954px;
+    min-height: 954px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.error_panel {
+    display: flex;
+    width: 1000px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.error_illustration {
+    width: 620px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.error_message {
+    display: flex;
+    width: 100%;
+    min-height: 97px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 32px 40px;
+    border-radius: 24px;
+    background: var(--bg-gray);
+    color: var(--gray-900);
+    font: 500 22px/1.5 var(--font-display);
+    text-align: center;
+}
+
+.error_message::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    flex: none;
+    background: url('../images/icon-alert.svg') center / 30px 30px no-repeat;
+}
+
 /* loan recruiter system */
 .recruiter_system_content {
     display: flex;
