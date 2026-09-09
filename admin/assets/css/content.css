@@ -1077,30 +1077,6 @@ small{
     font-weight: 700;
 }
 
-.info_rows th.required::before {
-    content: '';
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    width: 4px;
-    height: 4px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: #588fed;
-}
-
-.modal_label.required::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 4px;
-    height: 4px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: #588fed;
-}
-
 .info_rows td {
     color: #4f4f4f;
 }
