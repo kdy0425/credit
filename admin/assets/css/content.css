@@ -1836,6 +1836,7 @@ small{
 }
 
 .attachment_status {
+    text-align: center !important;
     color: #4f4f4f;
     line-height: 1.5;
 }
